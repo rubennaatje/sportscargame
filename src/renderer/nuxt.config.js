@@ -14,6 +14,7 @@ module.exports = {
     { ssr: true, src: '@/plugins/icons.js' },
     { ssr: false, src: '@/plugins/socket.io.js' },
     { ssr: false, src: '@/plugins/vueapexcharts.js' },
+    { ssr: false, src: '@/plugins/echarts.js' },
     { src: '@/plugins/vue-flags.js' },
     { src: '~/plugins/pixijs', mode: 'client', ssr: false },
   ],
@@ -42,6 +43,10 @@ module.exports = {
       {
         path: '@/components/common/',
         prefix: 's',
+      },
+      {
+        path: '@/components/echarts/',
+        prefix: 'e',
       },
     ],
   },
