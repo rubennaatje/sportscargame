@@ -39,7 +39,7 @@
       </SContainer>
 
       <SContainer title="temperatures">
-        test
+        <ETestGraph />
       </SContainer>
 
       <SContainer title="driver comms" class="col-span-2 h-full">

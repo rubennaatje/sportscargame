@@ -7,7 +7,7 @@ import { app } from 'electron';
 global.__resources = undefined; // eslint-disable-line no-underscore-dangle
 // noinspection BadExpressionStatementJS
 INCLUDE_RESOURCES_PATH; // eslint-disable-line no-unused-expressions
-if (__resources === undefined) console.error('[Main-process]: Resources path is undefined');
+if (__resources === undefined) { console.error('[Main-process]: Resources path is undefined'); }
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
@@ -16,8 +16,11 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit();
 });
 
-global.sharedObj = { name: '2017 24 Hours of Le mans', socketUrl: 'http://localhost:4001/' };
-global.user = { entryNumber: 8, username: 'Rubennaatje' };
+global.sharedObj = {
+  name: '2017 24 Hours of Le mans',
+  socketUrl: 'http://localhost:4001/',
+};
+global.user = { entryNumber: 7, username: 'Rubennaatje' };
 global.sharedObject = { socketIOAddress: process.argv[1] };
 
 // Load here all startup windows
