@@ -142,11 +142,12 @@ export default {
         car.addAnnotation("Jenson Button");
       }
       if (this.allCars[index].carnumber === 8) {
-        car.addAnnotation("Fernando Alonso");
+        car.addAnnotation("CRASHED INTO BARRIERS AT T1");
       }
       if (this.allCars[index].carnumber === 29) {
-        car.addAnnotation("Fastest lap", 0x9400d3, 20, 20);
+        car.addAnnotation("Fastest lap", 0x9400d3, 50, 20, 2);
       }
+      car.scale.set(2, 2);
       this.viewport.addChild(car);
     }
   }

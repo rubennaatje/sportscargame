@@ -36,7 +36,7 @@ export class CarOOP extends PIXI.Container {
 
     console.log(this);
     const text = new PIXI.Text(carnumber, {
-      fontFamily: 'Helvetica',
+      fontFamily: '"Courier New", Courier, monospace',
       fontWeight: 'bold',
       fontSize: 6,
       fill: 0xFFFFFF,
@@ -56,15 +56,18 @@ export class CarOOP extends PIXI.Container {
     this.addChild(this.car);
   }
 
-  addAnnotation (text, color = 0x2c3e50, x = 25, y = -25) {
+  addAnnotation (text, color = 0x2c3e50, distance = 19, angle = 90, scale = 1) {
+    const degrees = (angle) * (Math.PI / 180);
+    const x = Math.cos(degrees) * (0 - 0) - Math.sin(degrees) * (-25 - 0) + 0;
+    const y = Math.sin(degrees) * (0 - 0) + Math.cos(degrees) * (-25 - 0) + 0;
     this.annotation = new PIXI.Graphics();
     this.annotation.beginFill(color); // Purple
 
     // Draw a rectangle
 
-    this.annotation.drawRect(x + 10, y, text.length * 5 + 20, 10); // drawRect(x, y, width, height)
+    this.annotation.drawRect(x + 10, y, text.length * 4.9 + 10, 10); // drawRect(x, y, width, height)
     this.annotation.endFill();
-    
+
     // draw white number box
     this.annotation.beginFill(0xffffff);
     this.annotation.moveTo(x + 5, y);
@@ -96,25 +99,24 @@ export class CarOOP extends PIXI.Container {
 
     this.annotation.endFill();
     const line = new PIXI.Graphics();
-    line.lineStyle(0.5, 0xFFFFFF);
+    this.annotation.scale.set(scale, scale);
+    line.lineStyle(0.25, 0xFFFFFF);
     line.moveTo(2.5, -2.5);
     line.lineTo(x, y + 10);
     this.annotation.addChild(line);
     line.zIndex = -1;
     const text1 = new PIXI.Text(this.carnumber, {
-      fontFamily: 'Helvetica',
-      fontWeight: 'bold',
+      fontFamily: '"Courier New", Courier, monospace',
       fontSize: 7,
       fill: 0x001100,
       align: 'center',
-      fontStyle: 'italic',
     });
     text1.position.x = x + 4;
     text1.position.y = y + 1;
     text1.resolution = 8;
 
     const text2 = new PIXI.Text(text, {
-      fontFamily: 'Helvetica',
+      fontFamily: '"Courier New", Courier, monospace',
       fontWeight: 'bold',
       fontSize: 8,
       fill: 0xFFFFFF,

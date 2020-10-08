@@ -116,7 +116,7 @@ export class TrackOOP extends PIXI.Container {
     test.angle = this.angle360(first.x, first.y, second.x, second.y);
     if (placeText !== '') {
       const text = new PIXI.Text(placeText, {
-        fontFamily: 'Arial',
+        fontFamily: '"Courier New", Courier, monospace',
         fontSize: 8,
         fill: 0xFFFFFF,
         align: 'center',
