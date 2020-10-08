@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-chart :options="polar" />
+    <v-chart :options="polar" theme="dark_ruben" />
     <button class="btn-primary" @click="testMethod()">Send</button>
   </div>
 </template>
@@ -18,26 +18,12 @@
 </style>
 
 <script>
-import ECharts from 'vue-echarts';
-import 'echarts/lib/chart/line';
-import 'echarts/lib/component/polar';
-
+import { mapGetters } from 'vuex';
 export default {
-  components: {
-    'v-chart': ECharts,
-  },
-  computed () {
-    const data = [];
-
-    for (let i = 0; i <= 360; i++) {
-      const t = i / 180 * Math.PI;
-      const r = Math.sin(2 * t) * Math.cos(2 * t);
-      data.push([r, i]);
-    }
-
+  data () {
     return {
       polar: {
-        theme: 'dark',
+        theme: 'dark_ruben',
         xAxis: {
           type: 'value',
 
@@ -52,11 +38,24 @@ export default {
         {
           data: [[1, 500], [2, 922], [3, 901], [6, 934]],
           type: 'line',
+        },
+        {
+          data: [[1, 230], [2, 552], [3, 451], [6, 344]],
+          type: 'line',
         }],
         animation: true,
-        animationDuration: 2000,
+        animationDuration: 200,
       },
     };
+  },
+  computed: {
+    ...mapGetters({
+      getTelemetry: 'team/getTelemetry',
+      getLastLapTelemetry: 'team/getLastLapTelemetry',
+    }),
+  },
+  mounted () {
+    this.polar.series[0].data = this.getTelemetry();
   },
   methods: {
     testMethod () {
