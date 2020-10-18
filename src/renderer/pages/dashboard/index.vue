@@ -1,8 +1,11 @@
 <template>
   <section>
     <div class="grid grid-rows-3 grid-col gap-4">
-      <SContainer class="row-span-3 " title="TV"> <Trackmap /></SContainer>
-      <SContainer class="row-span-1 col-span-2" title="event info">
+      <SContainer class="row-span-3 " title="TV"> <SpeedChart /></SContainer>
+      <SContainer
+        class="row-span-1 col-span-2 h-full w-full"
+        title="event info"
+      >
         <SpeedChart />
       </SContainer>
 

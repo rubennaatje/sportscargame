@@ -3,7 +3,7 @@ import VueSocketIO from 'vue-socket.io';
 import { remote } from 'electron';
 export default ({ store }) => {
   Vue.use(new VueSocketIO({
-    debug: false,
+    debug: true,
     connection: remote.getGlobal('sharedObj').socketUrl,
     vuex: {
       store,

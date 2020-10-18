@@ -1,14 +1,14 @@
 <template>
-  <div>
+  <div class="h-screen">
     <app-header />
     <nuxt />
   </div>
 </template>
 
 <script>
-import appHeader from '@/components/header';
+import appHeader from "@/components/header";
 export default {
-  components: { appHeader },
+  components: { appHeader }
 };
 </script>
 

@@ -13,15 +13,14 @@
         <Stint class="overflow-y-auto" />
       </SContainer>
 
-      <SContainer class="h-1/3 " title="stint">
-        test
+      <SContainer class="h-1/3 col-span-2 " title="stint">
+        <RadialChart class="" />
       </SContainer>
 
       <SContainer
         title="fuel"
         class="grid  grid-cols-2 grid-rows-2 text-center"
       >
-        <RadialChart class="col-span-2 row-span-2" />
         <div>
           LL: <span class="better"><span class="green-text">3.2</span>L </span>
         </div>
@@ -72,7 +71,7 @@
       </SContainer>
 
       <SContainer title="onboard">
-        test
+        <SpeedChart />
       </SContainer>
 
       <SContainer class="col-span-2 h-1/5" title="chat">

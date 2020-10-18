@@ -4,6 +4,7 @@ export const state = () => ({
     currentTelemetry: [],
     lastlaptel: [],
   },
+  laptimes: [],
 });
 
 export const actions = {
@@ -20,6 +21,7 @@ export const mutations = {
       console.log(state);
     }
     state.telemetry.currentTelemetry = data.telemetry.currentTelemetry;
+    state.laptimes = data.telemetry.laptimes;
   },
 };
 
@@ -28,6 +30,9 @@ export const getters = {
     return state.telemetry.currentTelemetry.map(a => [a.pos, a.val]);
   },
   getLastLapTelemetry: state => id => {
+    return state.telemetry.lastlaptel.map(a => [a.pos, a.val]);
+  },
+  getBestLapTelemetry: state => id => {
     return state.telemetry.lastlaptel.map(a => [a.pos, a.val]);
   },
   getTelemetryNormal: state => id => {
@@ -44,5 +49,8 @@ export const getters = {
       keys: state.telemetry.lastlaptel.map(a => Math.floor(a.pos)),
       values: state.telemetry.lastlaptel.map(a => a.val),
     };
+  },
+  getLaptimes: state => {
+    return state.laptimes.forEach((val, index) => { return { num: index, time: val }; });
   },
 };
