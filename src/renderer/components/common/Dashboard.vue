@@ -26,11 +26,15 @@
 <script>
 import { GridLayout, GridItem } from "vue-grid-layout";
 import DonutChart from "../echarts/SpeedChart";
+import RadialChart from "../charts/RadialChart";
+import BarChart from "../charts/BarChart";
 export default {
   components: {
     GridLayout,
     GridItem,
-    DonutChart
+    DonutChart,
+    RadialChart,
+    BarChart
   },
   data() {
     return {
@@ -43,7 +47,7 @@ export default {
           h: 2,
           i: "0",
           static: false,
-          component: "DonutChart"
+          component: "BarChart"
         },
         {
           x: 2,
@@ -61,7 +65,7 @@ export default {
           h: 5,
           i: "2",
           static: false,
-          component: "DonutChart"
+          component: "RadialChart"
         },
         {
           x: 6,
