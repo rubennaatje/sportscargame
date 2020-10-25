@@ -31,7 +31,7 @@ export default {
       getTelemetry: "team/getTelemetry",
       getLastLapTelemetry: "team/getLastLapTelemetry"
     }),
-    polar: function() {
+    polar() {
       return {
         tooltip: {
           formatter: "{a} <br/>{b} : {c}%"
@@ -81,11 +81,8 @@ export default {
             title: {
               offsetCenter: [0, "-30%"] // x, y，单位px
             },
-            detail: {
-              // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-              fontWeight: "bolder"
-            },
-            detail: { formatter: "{value}%" },
+
+            detail: { formatter: "{value}%", fontWeight: "bolder" },
             data: [{ value: 0.5, name: "a" }]
           }
         ]

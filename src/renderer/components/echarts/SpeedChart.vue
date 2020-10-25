@@ -22,55 +22,55 @@
 </style>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 export default {
-  data() {
+  data () {
     return {
       polar: {
-        theme: "dark_ruben",
+        theme: 'dark_ruben',
         xAxis: {
-          type: "value"
+          type: 'value',
         },
         yAxis: {
-          type: "value"
+          type: 'value',
         },
         series: [
           {
             data: [],
-            type: "line"
+            type: 'line',
           },
           {
             data: [],
-            type: "line"
+            type: 'line',
           },
           {
             data: [],
-            type: "line"
-          }
+            type: 'line',
+          },
         ],
         animation: true,
-        animationDuration: 200
-      }
+        animationDuration: 200,
+      },
     };
   },
   computed: {
     ...mapGetters({
-      getTelemetry: "team/getTelemetry",
-      getLastLapTelemetry: "team/getLastLapTelemetry"
-    })
+      getTelemetry: 'team/getTelemetry',
+      getLastLapTelemetry: 'team/getLastLapTelemetry',
+    }),
   },
-  mounted() {
+  mounted () {
     this.polar.series[0].data = this.getTelemetry();
     this.polar.series[1].data = this.getLastLapTelemetry();
   },
   methods: {
-    testMethod() {
+    testMethod () {
       this.polar.series[0].data.push([
         this.polar.series[0].data.length + 1,
-        Math.random() * 500
+        Math.random() * 500,
       ]);
       // this.polar.series[1].data.push([this.polar.series[1].data.length + 1, Math.random() * 500]);
-    }
-  }
+    },
+  },
 };
 </script>

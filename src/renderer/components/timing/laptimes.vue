@@ -64,14 +64,14 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
 export default {
   computed: {
     ...mapGetters({
-      allLaps: "team/getlaps"
-    })
-  }
+      allLaps: 'team/getlaps',
+    }),
+  },
 };
 </script>
 <style></style>
