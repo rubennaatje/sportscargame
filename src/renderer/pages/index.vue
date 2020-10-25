@@ -1,45 +1,25 @@
 <template>
-  <div class="e-nuxt-container">
-    <div class="e-nuxt-content">
-      <div class="e-nuxt-logo">
-        <img style="max-width: 100%;" src="~assets/electron-nuxt.png">
-      </div>
-      <div class="e-nuxt-system-info">
-        <system-information />
-      </div>
-    </div>
-    <div class="e-nuxt-links">
-      <div
-        class="e-nuxt-button"
-        @click="openURL('https://github.com/michalzaq12/electron-nuxt')"
-      >
-        Github
-      </div>
-      <div class="e-nuxt-button" @click="openURL('https://nuxtjs.org/guide')">Nuxt.js</div>
-      <div class="e-nuxt-button" @click="openURL('https://electronjs.org/docs')">Electron.js</div>
-      <AwesomeButton />
-    </div>
-  </div>
+  <SDashboard />
 </template>
 
 <script>
-import { remote } from 'electron';
-import SystemInformation from '@/components/SystemInformation.vue';
+import { remote } from "electron";
+import SystemInformation from "@/components/SystemInformation.vue";
 
 export default {
   components: {
-    SystemInformation,
+    SystemInformation
   },
-  data () {
+  data() {
     return {
-      externalContent: '',
+      externalContent: ""
     };
   },
   methods: {
-    openURL (url) {
+    openURL(url) {
       remote.shell.openExternal(url);
-    },
-  },
+    }
+  }
 };
 </script>
 
