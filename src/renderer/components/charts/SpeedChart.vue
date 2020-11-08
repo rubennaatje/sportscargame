@@ -4,6 +4,7 @@
       :options="polar"
       theme="dark_ruben"
       style="width: 100%; height: 100%;"
+      autoresize
     />
   </div>
 </template>

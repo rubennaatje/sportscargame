@@ -1,15 +1,15 @@
 <template>
   <section class="fieldset">
     <h1 class="fieldset-title">{{ title }}</h1>
-    <slot class="overflow-scroll h-full" />
+    <slot class="overflow-scroll h-full w-full" />
   </section>
 </template>
 
 <script>
 export default {
-  name: 'Container',
+  name: "Container",
   // eslint-disable-next-line vue/require-prop-types
-  props: ['title'],
+  props: ["title"]
 };
 </script>
 
@@ -18,6 +18,7 @@ export default {
   position: relative;
   border: 1px solid #ddd;
   padding: 10px;
+  /* overflow: scroll; */
 }
 
 .fieldset .fieldset-title {

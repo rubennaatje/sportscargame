@@ -19,6 +19,9 @@ module.exports = {
     { src: '@/plugins/vue-flags.js' },
     { src: '~/plugins/pixijs', mode: 'client', ssr: false },
   ],
+  build: {
+    transpile: ['vue-echarts', 'resize-detector'],
+  },
   buildModules: [
     '@nuxtjs/tailwindcss',
     // TODO: Remove when upgrading to nuxt 2.13+

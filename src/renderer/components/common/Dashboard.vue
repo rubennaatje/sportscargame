@@ -16,8 +16,8 @@
       :w="item.w"
       :h="item.h"
       :i="item.i"
-      ><SContainer class="h-full" :title="itemTitle(item)">
-        <component :is="item.component"> </component>
+      ><SContainer class="h-full w-full" :title="itemTitle(item)">
+        <component :is="item.component" class="h-full w-full"> </component>
       </SContainer>
     </grid-item>
   </grid-layout>
@@ -74,7 +74,7 @@ export default {
           h: 3,
           i: "3",
           static: false,
-          component: "DonutChart"
+          component: "RadialChart"
         },
         {
           x: 8,
@@ -83,7 +83,7 @@ export default {
           h: 3,
           i: "4",
           static: false,
-          component: "DonutChart"
+          component: "RadialChart"
         },
         {
           x: 10,
@@ -92,7 +92,7 @@ export default {
           h: 3,
           i: "5",
           static: false,
-          component: "DonutChart"
+          component: "RadialChart"
         },
         {
           x: 0,
@@ -110,7 +110,7 @@ export default {
           h: 5,
           i: "7",
           static: false,
-          component: "DonutChart"
+          component: "BarChart"
         },
         {
           x: 4,
@@ -128,7 +128,7 @@ export default {
           h: 4,
           i: "9",
           static: true,
-          component: "DonutChart"
+          component: "BarChart"
         },
         {
           x: 8,
