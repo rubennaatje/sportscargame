@@ -1,18 +1,18 @@
 <template>
-  <div ref="stage" class="stage h-full" />
+  <div ref="stage" v-prevent-parent-scroll class="stage h-full" />
 </template>
 <script>
 import { Viewport } from 'pixi-viewport';
 // eslint-disable-next-line no-unused-vars
 import tweenManager from 'pixi-tween';
-import { mapGetters } from 'vuex';
+// import { mapGetters } from 'vuex';
 import { TrackOOP } from './trackoop';
 import { CarOOP } from './caroop';
 export default {
   computed: {
-    ...mapGetters({
-      allCars: 'cars/getAll',
-    }),
+    allCars () {
+      return this.$store.state.cars.cars;
+    },
   },
   watch: {
     allCars (newValue, oldValue) {
