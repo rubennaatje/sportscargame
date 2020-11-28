@@ -1,3 +1,3 @@
-require('./check-engines')
-process.env.NODE_ENV = 'development'
-require('./index')
+require('./check-engines');
+process.env.NODE_ENV = 'development';
+require('./index');

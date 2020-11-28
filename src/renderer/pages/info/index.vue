@@ -1,36 +1,52 @@
 <template>
   <section>
     <div class="container">
-      <p>
-        A modern and minimal CSS framework for terminal lovers.
-      </p>
+      <p>A modern and minimal CSS framework for terminal lovers.</p>
 
       <h2 id="project-goals">Project Goals</h2>
       <p>
-        Terminal CSS has no overhead and is lightweight <strong>(~ 3k gzip)</strong>.
-        The source is written in <strong>pure css</strong> to be accessible for everybody and easy to contribute.
+        Terminal CSS has no overhead and is lightweight
+        <strong>(~ 3k gzip)</strong>. The source is written in
+        <strong>pure css</strong> to be accessible for everybody and
+        easy to contribute.
       </p>
       <h2 id="markdown-terminal-css">Markdown ❤️ Terminal CSS</h2>
-      <p>It's perfect for your <em>personal website</em>, <em>blog</em>, or <em>side project</em>.</p>
+      <p>
+        It's perfect for your <em>personal website</em>,
+        <em>blog</em>, or <em>side project</em>.
+      </p>
       <h2 id="how-to-use">How to use</h2>
-      <p>When using something like Webpack just install with <code>npm i terminal.css</code>.</p>
+      <p>
+        When using something like Webpack just install with
+        <code>npm i terminal.css</code>.
+      </p>
       <pre><code class="language-js hljs javascript"><span class="hljs-keyword">import</span> <span class="hljs-string">'terminal.css'</span></code></pre>
-      <p>Terminal CSS is also available via <a href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css">CDN</a></p>
+      <p>
+        Terminal CSS is also available via
+        <a
+          href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css"
+        >CDN</a>
+      </p>
       <pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css"</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css"</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css"</span> /&gt;</span></code></pre>
       <h2 id="themes">Themes</h2>
-      <p>To create your own theme just open the dev-tools and edit the CSS Variables. Copy and paste it to your website. Done!  </p>
-      <br>
+      <p>
+        To create your own theme just open the dev-tools and edit the
+        CSS Variables. Copy and paste it to your website. Done!
+      </p>
+      <br />
 
       <h2 id="contributers">Contributers</h2>
       <ul>
         <li><a href="https://othyn.com/">Ben</a></li>
-        <li><a href="https://matiaskorhonen.fi/">Matias Korhonen</a></li>
+        <li>
+          <a href="https://matiaskorhonen.fi/">Matias Korhonen</a>
+        </li>
       </ul>
-      <br>
+      <br />
 
       <p>With ❤️ by <a href="https://jduri.com">Jonas D.</a></p>
 
-      <hr>
+      <hr />
       <div class="components components-grid">
         <aside id="menu">
           <h2>Components</h2>
@@ -57,7 +73,9 @@
               <li><a href="#Alerts">Alerts</a></li>
               <li><a href="#Media">Media</a></li>
               <li><a href="#Figure">Image with caption</a></li>
-              <li><a href="#highlightjs">Supports Highlight.js</a></li>
+              <li>
+                <a href="#highlightjs">Supports Highlight.js</a>
+              </li>
             </ul>
           </nav>
 
@@ -75,39 +93,81 @@
             <header>
               <h2 id="GridSystem">Grid System</h2>
               <p>
-                Terminal CSS has no build-in grid system. However, you can roll your own with Flexbox or CSS Grid.
+                Terminal CSS has no build-in grid system. However, you
+                can roll your own with Flexbox or CSS Grid.
               </p>
             </header>
             <div class="image-grid">
-              <a href="https://picsum.photos" style="border: none;"><img src="https://picsum.photos/200/300?random&amp;1" width="auto" height="auto" alt="random image"></a>
-              <a href="https://picsum.photos" style="border: none;"><img src="https://picsum.photos/200/300?random&amp;2" width="auto" height="auto" alt="random image"></a>
-              <a href="https://picsum.photos" style="border: none;"><img src="https://picsum.photos/200/300?random&amp;3" width="auto" height="auto" alt="random image"></a>
-              <a href="https://picsum.photos" style="border: none;"><img src="https://picsum.photos/200/300?random&amp;4" width="auto" height="auto" alt="random image"></a>
-              <a href="https://picsum.photos" style="border: none;"><img src="https://picsum.photos/200/300?random&amp;5" width="auto" height="auto" alt="random image"></a>
-              <a href="https://picsum.photos" style="border: none;"><img src="https://picsum.photos/200/300?random&amp;6" width="auto" height="auto" alt="random image"></a>
-              <a href="https://picsum.photos" style="border: none;"><img src="https://picsum.photos/200/300?random&amp;7" width="auto" height="auto" alt="random image"></a>
+              <a href="https://picsum.photos" style="border: none"><img
+                src="https://picsum.photos/200/300?random&amp;1"
+                width="auto"
+                height="auto"
+                alt="random image"
+              ></a>
+              <a href="https://picsum.photos" style="border: none"><img
+                src="https://picsum.photos/200/300?random&amp;2"
+                width="auto"
+                height="auto"
+                alt="random image"
+              ></a>
+              <a href="https://picsum.photos" style="border: none"><img
+                src="https://picsum.photos/200/300?random&amp;3"
+                width="auto"
+                height="auto"
+                alt="random image"
+              ></a>
+              <a href="https://picsum.photos" style="border: none"><img
+                src="https://picsum.photos/200/300?random&amp;4"
+                width="auto"
+                height="auto"
+                alt="random image"
+              ></a>
+              <a href="https://picsum.photos" style="border: none"><img
+                src="https://picsum.photos/200/300?random&amp;5"
+                width="auto"
+                height="auto"
+                alt="random image"
+              ></a>
+              <a href="https://picsum.photos" style="border: none"><img
+                src="https://picsum.photos/200/300?random&amp;6"
+                width="auto"
+                height="auto"
+                alt="random image"
+              ></a>
+              <a href="https://picsum.photos" style="border: none"><img
+                src="https://picsum.photos/200/300?random&amp;7"
+                width="auto"
+                height="auto"
+                alt="random image"
+              ></a>
             </div>
           </section>
-          <hr>
+          <hr />
           <section>
             <header><h2 id="Navigation">Navigation</h2></header>
             <div class="terminal-nav">
               <div class="terminal-logo">
-                <div class="logo terminal-prompt"><a href="#" class="no-style">Logo</a></div>
+                <div class="logo terminal-prompt">
+                  <a href="#" class="no-style">Logo</a>
+                </div>
               </div>
               <nav class="terminal-menu">
                 <ul>
                   <li><a class="menu-item" href="#">Item #1</a></li>
-                  <li><a class="menu-item active" href="#">Active Item #2</a></li>
+                  <li>
+                    <a class="menu-item active" href="#">Active Item #2</a>
+                  </li>
                   <li><a class="menu-item" href="#">Item #3</a></li>
                 </ul>
               </nav>
             </div>
           </section>
 
-          <hr>
+          <hr />
           <section>
-            <header><h2 id="NavigationList">Navigation Lists</h2></header>
+            <header>
+              <h2 id="NavigationList">Navigation Lists</h2>
+            </header>
             <nav>
               <ul>
                 <li><a href="#">Dashboard</a></li>
@@ -125,7 +185,7 @@
             </nav>
           </section>
 
-          <hr>
+          <hr />
           <section>
             <header><h2 id="Lists">Lists</h2></header>
             <ul>
@@ -145,18 +205,29 @@
             </ul>
             <p>Don't forget <strong>Ordered lists</strong>:</p>
             <ol>
-              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing
+                elit.
+              </li>
               <li>
                 Aliquam tincidunt mauris eu risus
                 <ol>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetuer
+                    adipiscing elit.
+                  </li>
                   <li>Aliquam tincidunt mauris eu risus.</li>
                 </ol>
               </li>
-              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing
+                elit.
+              </li>
               <li>Aliquam tincidunt mauris eu risus.</li>
             </ol>
-            <p><strong>Description lists </strong>are also included.</p>
+            <p>
+              <strong>Description lists </strong>are also included.
+            </p>
             <dl>
               <dt>Description list title 01</dt>
               <dd>Description list description 01</dd>
@@ -164,38 +235,60 @@
               <dd>Description list description 02</dd>
               <dd>Description list description 03</dd>
             </dl>
-            <p>A <strong>Table of content</strong>, which can be used as an index for a blog archive.</p>
-            <p>Unlike regular lists, the TOC component <em>only supports a single depth level.</em></p>
+            <p>
+              A <strong>Table of content</strong>, which can be used
+              as an index for a blog archive.
+            </p>
+            <p>
+              Unlike regular lists, the TOC component
+              <em>only supports a single depth level.</em>
+            </p>
             <ol class="terminal-toc">
-              <li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-              <li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-              <li><a href="#">Aliquam tincidunt mauris eu risus.</a></li>
-              <li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-              <li><a href="#">Aliquam tincidunt mauris eu risus.</a></li>
+              <li>
+                <a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                  elit.</a>
+              </li>
+              <li>
+                <a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                  elit.</a>
+              </li>
+              <li>
+                <a href="#">Aliquam tincidunt mauris eu risus.</a>
+              </li>
+              <li>
+                <a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                  elit.</a>
+              </li>
+              <li>
+                <a href="#">Aliquam tincidunt mauris eu risus.</a>
+              </li>
             </ol>
           </section>
 
-          <hr>
+          <hr />
           <section>
             <header>
               <h2 id="Typography">Typography</h2>
               <h1>Level 1 Heading</h1>
               <p>
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-                tempor sit amet, ante.
+                Pellentesque habitant morbi tristique senectus et
+                netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor quam, feugiat vitae, ultricies eget, tempor sit
+                amet, ante.
               </p>
               <h2>Level 2 Heading</h2>
               <p>
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-                tempor sit amet, ante.
+                Pellentesque habitant morbi tristique senectus et
+                netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor quam, feugiat vitae, ultricies eget, tempor sit
+                amet, ante.
               </p>
               <h3>Level 3 Heading</h3>
               <p>
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-                tempor sit amet, ante.
+                Pellentesque habitant morbi tristique senectus et
+                netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor quam, feugiat vitae, ultricies eget, tempor sit
+                amet, ante.
               </p>
               <h4>Level 4 Heading</h4>
               <h5>Level 5 Heading</h5>
@@ -203,7 +296,7 @@
             </header>
           </section>
 
-          <hr>
+          <hr />
           <section>
             <header>
               <h2 id="Tables">Tables</h2>
@@ -278,17 +371,21 @@
               </tbody>
             </table>
           </section>
-          <hr>
+          <hr />
           <section>
-            <header><h2 id="SpecialElements">Special Elements</h2></header>
-            <p>Terminal CSS also supports a range of special elements.</p>
+            <header>
+              <h2 id="SpecialElements">Special Elements</h2>
+            </header>
+            <p>
+              Terminal CSS also supports a range of special elements.
+            </p>
 
             <h3 id="Blockquote">Blockquote</h3>
             <blockquote>
               <p>
-                <em>This is a properly formatted blockquote, btw.</em> Measuring
-                programming progress by lines of code is like measuring aircraft building
-                progress by weight.
+                <em>This is a properly formatted blockquote, btw.</em>
+                Measuring programming progress by lines of code is
+                like measuring aircraft building progress by weight.
               </p>
               <footer>
                 <cite><a href="http://www.thegatesnotes.com">Bill Gates</a></cite>
@@ -297,39 +394,40 @@
             <h3 id="Misc">Misc</h3>
             <h5 class="terminal-prompt">Terminal Prompt</h5>
             <p>
-              I am <a href="?abc123">the a tag</a> example<br>
-              I am <abbr title="test">the abbr tag</abbr> example<br>
-              I am <b>the b tag</b> example<br>
-              I am <cite>the cite tag</cite> example<br>
-              I am <code>the code tag</code> example<br>
-              I am <del>the del tag</del> example<br>
-              I am <dfn>the dfn tag</dfn> example<br>
-              I am <em>the em tag</em> example<br>
-              I am <i>the i tag</i> example<br>
-              I am <ins>the ins tag</ins> example<br>
-              I am <kbd>the kbd tag</kbd> example<br>
-              I am <q>the q tag</q> example<br>
-              I am <samp>the samp tag</samp> example<br>
-              I am <small>the small tag</small> example<br>
-              I am <span>the span tag</span> example<br>
-              I am <strong>the strong tag</strong> example<br>
-              I am <sub>the sub tag</sub> example<br>
-              I am <sup>the sup tag</sup> example<br>
-              I am <var>the var tag</var> example<br>
+              I am <a href="?abc123">the a tag</a> example<br />
+              I am
+              <abbr title="test">the abbr tag</abbr> example<br />
+              I am <b>the b tag</b> example<br />
+              I am <cite>the cite tag</cite> example<br />
+              I am <code>the code tag</code> example<br />
+              I am <del>the del tag</del> example<br />
+              I am <dfn>the dfn tag</dfn> example<br />
+              I am <em>the em tag</em> example<br />
+              I am <i>the i tag</i> example<br />
+              I am <ins>the ins tag</ins> example<br />
+              I am <kbd>the kbd tag</kbd> example<br />
+              I am <q>the q tag</q> example<br />
+              I am <samp>the samp tag</samp> example<br />
+              I am <small>the small tag</small> example<br />
+              I am <span>the span tag</span> example<br />
+              I am <strong>the strong tag</strong> example<br />
+              I am <sub>the sub tag</sub> example<br />
+              I am <sup>the sup tag</sup> example<br />
+              I am <var>the var tag</var> example<br />
             </p>
 
             <h4 id="Address">Address</h4>
             <address>
-              Mozilla Foundation<br>
-              1981 Landings Drive<br>
-              Building K<br>
-              Mountain View, CA 94043-0801<br>
+              Mozilla Foundation<br />
+              1981 Landings Drive<br />
+              Building K<br />
+              Mountain View, CA 94043-0801<br />
               USA
             </address>
-            <br>
+            <br />
           </section>
 
-          <hr>
+          <hr />
           <section>
             <header><h2 id="Forms">Forms</h2></header>
             <form action="#">
@@ -337,143 +435,217 @@
                 <legend>Form legend</legend>
                 <div class="form-group">
                   <label for="email">Email input:</label>
-                  <input id="email" name="email" type="email" required="" minlength="5" placeholder="test">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required=""
+                    minlength="5"
+                    placeholder="test"
+                  >
                 </div>
                 <div class="form-group">
                   <label for="text">Text input:</label>
-                  <input id="text" name="text" type="text" required="" minlength="5" placeholder="test">
+                  <input
+                    id="text"
+                    name="text"
+                    type="text"
+                    required=""
+                    minlength="5"
+                    placeholder="test"
+                  >
                 </div>
                 <div class="form-group">
                   <label for="itext">Invalid input (min-length 10):</label>
-                  <input id="itext" name="itext" type="text" minlength="10">
+                  <input
+                    id="itext"
+                    name="itext"
+                    type="text"
+                    minlength="10"
+                  >
                 </div>
                 <div class="form-group">
                   <label for="pw">Password input:</label>
-                  <input id="pw" type="password" name="pw" value="password">
+                  <input
+                    id="pw"
+                    type="password"
+                    name="pw"
+                    value="password"
+                  >
                 </div>
                 <div class="form-group">
                   <label for="radio">Radio input:</label>
-                  <input id="radio" name="radio" type="radio">
+                  <input id="radio" name="radio" type="radio" />
                 </div>
                 <div class="form-group">
                   <label for="check">Checkbox input:</label>
-                  <input id="check" for="check" type="checkbox">
+                  <input id="check" for="check" type="checkbox" />
                 </div>
                 <div class="form-group">
                   <label for="select">Select field:</label>
                   <select id="select" name="select">
-                    <option> Option 01 </option>
-                    <option> Option 02 </option>
+                    <option>Option 01</option>
+                    <option>Option 02</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="tarea">Textarea:</label>
-                  <textarea id="tarea" cols="30" rows="5" name="=&quot;tarea&quot;">Textarea text</textarea>
+                  <textarea
+                    id="tarea"
+                    cols="30"
+                    rows="5"
+                    name="=&quot;tarea&quot;"
+                  >
+Textarea text</textarea>
                 </div>
                 <div class="form-group">
                   <label for="submit">Input Button:</label>
-                  <button id="submit" class="btn btn-default" type="submit" role="button" name="submit">Submit</button>
+                  <button
+                    id="submit"
+                    class="btn btn-default"
+                    type="submit"
+                    role="button"
+                    name="submit"
+                  >
+                    Submit
+                  </button>
                 </div>
               </fieldset>
             </form>
           </section>
-          <hr>
+          <hr />
           <section>
             <header><h2 id="Progress">Progress Bar</h2></header>
-            <br>
+            <br />
             <p>With only an arrow</p>
             <div class="progress-bar">
               <div class="progress-bar-filled" style="width: 40%" />
             </div>
             <p>With a percentage showing above the arrow</p>
             <div class="progress-bar progress-bar-show-percent">
-              <div class="progress-bar-filled" style="width: 30%" data-filled="Loading 30%" />
+              <div
+                class="progress-bar-filled"
+                style="width: 30%"
+                data-filled="Loading 30%"
+              />
             </div>
             <p>Without arrow</p>
             <div class="progress-bar progress-bar-no-arrow">
-              <div class="progress-bar-filled" style="width: 60%" data-filled="Loading 60%" />
+              <div
+                class="progress-bar-filled"
+                style="width: 60%"
+                data-filled="Loading 60%"
+              />
             </div>
-            <br>
+            <br />
           </section>
 
-          <hr>
+          <hr />
           <section>
             <header><h2 id="Buttons">Buttons</h2></header>
-            <button class="btn btn-default">Default</button><br><br>
-            <button class="btn btn-primary">Primary</button><br><br>
-            <button class="btn btn-error">Error</button><br><br>
-            <button class="btn btn-default btn-ghost">Ghost Button</button><br><br>
-            <button class="btn btn-primary btn-ghost">Ghost Button</button><br><br>
-            <button class="btn btn-error btn-ghost">Ghost Button</button><br><br>
-            <button class="btn btn-primary btn-block">Block Level Button</button><br><br>
+            <button class="btn btn-default">Default</button><br ><br >
+            <button class="btn btn-primary">Primary</button><br ><br >
+            <button class="btn btn-error">Error</button><br /><br />
+            <button class="btn btn-default btn-ghost">
+              Ghost Button
+</button><br ><br >
+            <button class="btn btn-primary btn-ghost">
+              Ghost Button
+</button><br ><br >
+            <button class="btn btn-error btn-ghost">
+              Ghost Button
+</button><br ><br >
+            <button class="btn btn-primary btn-block">
+              Block Level Button
+</button><br ><br >
             <p>Button Group</p>
             <div class="btn-group">
               <button class="btn btn-default btn-ghost">Left</button>
-              <button class="btn btn-default btn-ghost">Middle</button>
+              <button class="btn btn-default btn-ghost">
+                Middle
+              </button>
               <button class="btn btn-default btn-ghost">Right</button>
             </div>
-            <br>
+            <br />
           </section>
 
-          <hr>
+          <hr />
           <section>
             <header><h2 id="Cards">Cards</h2></header>
             <div class="terminal-card">
               <header>Card Title</header>
               <div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quas
-                ex vero enim in doloribus officiis ullam vel nam esse sapiente velit
-                incidunt. Eaque quod et, aut maiores excepturi sint.
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Expedita, quas ex vero enim in doloribus
+                officiis ullam vel nam esse sapiente velit incidunt.
+                Eaque quod et, aut maiores excepturi sint.
               </div>
             </div>
-            <br>
+            <br />
           </section>
 
-          <hr>
+          <hr />
           <section>
             <header><h2 id="Timeline">Timeline</h2></header>
             <div class="terminal-timeline">
               <div class="terminal-card">
                 <header>Card Title</header>
                 <div>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quas
-                  ex vero enim in doloribus officiis ullam vel nam esse sapiente velit
-                  incidunt. Eaque quod et, aut maiores excepturi sint.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Expedita, quas ex vero enim in doloribus
+                  officiis ullam vel nam esse sapiente velit incidunt.
+                  Eaque quod et, aut maiores excepturi sint.
                 </div>
               </div>
               <div class="terminal-card">
                 <header>Card Title</header>
                 <div>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quas
-                  ex vero enim in doloribus officiis ullam vel nam esse sapiente velit
-                  incidunt. Eaque quod et, aut maiores excepturi sint.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Expedita, quas ex vero enim in doloribus
+                  officiis ullam vel nam esse sapiente velit incidunt.
+                  Eaque quod et, aut maiores excepturi sint.
                 </div>
               </div>
             </div>
-            <br>
+            <br />
           </section>
 
-          <hr>
+          <hr />
           <section>
             <header><h2 id="Alerts">Alerts</h2></header>
             <div class="terminal-alert">Default message</div>
-            <div class="terminal-alert terminal-alert-primary">Primary message</div>
-            <div class="terminal-alert terminal-alert-error">Error message</div>
+            <div class="terminal-alert terminal-alert-primary">
+              Primary message
+            </div>
+            <div class="terminal-alert terminal-alert-error">
+              Error message
+            </div>
           </section>
-          <hr>
+          <hr />
           <section>
             <header><h2 id="Figure">Image with caption</h2></header>
             <figure>
-              <img src="https://picsum.photos/1000/600?random&amp;imageWithCaption" alt="Image with caption" title="Image with caption">
+              <img
+                src="https://picsum.photos/1000/600?random&amp;imageWithCaption"
+                alt="Image with caption"
+                title="Image with caption"
+              >
               <figcaption>Image with caption</figcaption>
             </figure>
           </section>
 
-          <hr>
+          <hr />
           <section>
             <header>
               <h2 id="highlightjs">Supports Highlight.js</h2>
-              <p>Terminal CSS comes with a build in theme for <a href="https://highlightjs.org/" target="_black" rel="noopener noreferrer">Highlight.js</a></p>
+              <p>
+                Terminal CSS comes with a build in theme for
+                <a
+                  href="https://highlightjs.org/"
+                  target="_black"
+                  rel="noopener noreferrer"
+                >Highlight.js</a>
+              </p>
             </header>
             <pre><code class="hljs css">
 <span class="hljs-selector-class">.hljs</span> {
@@ -548,15 +720,22 @@
 </code>
 </pre>
           </section>
-          <hr>
+          <hr />
           <section>
             <header><h2>Documentation</h2></header>
-            <p>Most of the documentation is still at an early stage. For more details, please have a look at the source of this website.</p>
+            <p>
+              Most of the documentation is still at an early stage.
+              For more details, please have a look at the source of
+              this website.
+            </p>
             <section>
               <header>
                 <h2 id="DocVariables">Variables</h2>
               </header>
-              <p>Customizing the style of Terminal CSS with CSS Variables is easy.</p>
+              <p>
+                Customizing the style of Terminal CSS with CSS
+                Variables is easy.
+              </p>
 
               <dl class="custom-dl">
                 <style>
@@ -564,69 +743,117 @@
                   font-weight: 600;
                   }
 
-                  .custom-dl dd.italic{
+                  .custom-dl dd.italic {
                   font-style: italic;
                   }
                 </style>
                 <dt>--global-font-size</dt>
                 <dd>The Base font size</dd>
                 <dt>--global-line-height</dt>
-                <dd>The base line height. Modify this to achieve the best readability.</dd>
+                <dd>
+                  The base line height. Modify this to achieve the
+                  best readability.
+                </dd>
                 <dt>--font-stack</dt>
                 <dd>The fonts for the website.</dd>
-                <dd>Use <code>@font-face</code> or any other font provider to include your custom fonts.</dd>
+                <dd>
+                  Use <code>@font-face</code> or any other font
+                  provider to include your custom fonts.
+                </dd>
                 <dt>--mono-font-stack</dt>
                 <dd>Same as above but for <code>code</code>.</dd>
                 <dt>--background-color</dt>
                 <dd>The page background color</dd>
                 <dt>--font-color</dt>
-                <dd>The base font color for text, headlines, blockquotes, lists, etc.</dd>
+                <dd>
+                  The base font color for text, headlines,
+                  blockquotes, lists, etc.
+                </dd>
                 <dt>--invert-font-color</dt>
-                <dd>Sometimes text appears on a colored background. Adjust this color to improve readability.</dd>
+                <dd>
+                  Sometimes text appears on a colored background.
+                  Adjust this color to improve readability.
+                </dd>
                 <dt>--primary-color</dt>
-                <dd>The primary color is used for links and buttons.</dd>
+                <dd>
+                  The primary color is used for links and buttons.
+                </dd>
                 <dt>--secondary-color</dt>
-                <dd>The secondary color is more subtle then the primary color. It's used for code highlighting and image captions.</dd>
+                <dd>
+                  The secondary color is more subtle then the primary
+                  color. It's used for code highlighting and image
+                  captions.
+                </dd>
                 <dt>--error-color</dt>
                 <dd>Used for error alerts and form validation.</dd>
                 <dt>--progress-bar-background</dt>
                 <dd>The background color of progress bars.</dd>
                 <dt>--progress-bar-fill</dt>
-                <dd>The fill color, indicating the progress in progress bars.</dd>
+                <dd>
+                  The fill color, indicating the progress in progress
+                  bars.
+                </dd>
                 <dt>--code-bg-color</dt>
-                <dd>The background color of <code>&lt;code&gt;</code> elements.</dd>
+                <dd>
+                  The background color of
+                  <code>&lt;code&gt;</code> elements.
+                </dd>
                 <dt>--input-style</dt>
-                <dd>The style of input element borders. Possible values are:</dd>
-                <dd class="italic">none, solid, dotted, dashed, double, groove, ridge, inset, outset, hidden, inherit, initial, unset</dd>
+                <dd>
+                  The style of input element borders. Possible values
+                  are:
+                </dd>
+                <dd class="italic">
+                  none, solid, dotted, dashed, double, groove, ridge,
+                  inset, outset, hidden, inherit, initial, unset
+                </dd>
                 <dt>--display-h1-decoration</dt>
-                <dd>Show a double dash below <code>h1</code> elements. Possible values are:</dd>
+                <dd>
+                  Show a double dash below <code>h1</code> elements.
+                  Possible values are:
+                </dd>
                 <dd class="italic">block, none</dd>
               </dl>
             </section>
 
-            <hr>
+            <hr />
             <section>
               <header>
                 <h2 id="DocTypography">Typography</h2>
               </header>
-              <p>Terminal CSS uses a single font size for almost all elements. However, there is a way to use browser default font sizes if you wish.</p>
+              <p>
+                Terminal CSS uses a single font size for almost all
+                elements. However, there is a way to use browser
+                default font sizes if you wish.
+              </p>
               <dl class="custom-dl">
                 <dt>Single font size</dt>
-                <dd>Use <code>&lt;body class="terminal"&gt;</code>. If you leave that option, it will fallback to browser defaults. See <a href="/sans-serif/">here</a>.</dd>
+                <dd>
+                  Use <code>&lt;body class="terminal"&gt;</code>. If
+                  you leave that option, it will fallback to browser
+                  defaults. See <a href="/sans-serif/">here</a>.
+                </dd>
               </dl>
             </section>
           </section>
-          <hr>
+          <hr />
           <footer>
             <p>
               This project is inspired by
-              <a href="https://egoist.sh/" target="_blank" rel="noopener noreferer">@egoist's</a>
+              <a
+                href="https://egoist.sh/"
+                target="_blank"
+                rel="noopener noreferer"
+              >@egoist's</a>
               work -
-              <a href="https://hackcss.egoist.moe/" rel="noopener noreferer">hack.css</a>
+              <a
+                href="https://hackcss.egoist.moe/"
+                rel="noopener noreferer"
+              >hack.css</a>
             </p>
           </footer>
 
-          <hr>
+          <hr />
           <section>
             <header />
             <p>Version: 0.7.1 <a href="#menu">Top</a></p>

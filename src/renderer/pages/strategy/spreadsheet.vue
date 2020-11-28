@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       spreadsheet: null,
       // If other options needed
@@ -17,20 +17,17 @@ export default {
         },
       },
       // Initial data for spreadsheet
-      data: {
-
-      },
+      data: {},
     };
   },
-  mounted () {
+  mounted() {
     this.spreadsheet = this.$refs.spreadsheet.spreadsheet;
   },
-
 };
 </script>
 
 <style>
 .x-spreadsheet-toolbar {
-    color: #4c4c4c;
+  color: #4c4c4c;
 }
 </style>

@@ -25,11 +25,15 @@
             <span property="name">{{ item.title }}</span>
           </nuxt-link>
         </li>
-        <li style="height: 28px;">
+        <li style="height: 28px">
           <span />
         </li>
       </ul>
-      <ul vocab="https://schema.org/" typeof="BreadcrumbList" class="submenu">
+      <ul
+        vocab="https://schema.org/"
+        typeof="BreadcrumbList"
+        class="submenu"
+      >
         <li
           v-for="submenu in sublinks"
           :key="submenu.title"
@@ -40,7 +44,7 @@
             <span property="name">{{ submenu.title }}</span>
           </nuxt-link>
         </li>
-        <li style="height: 28px;">
+        <li style="height: 28px">
           <span />
         </li>
       </ul>
@@ -50,7 +54,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       menu: [
         {
@@ -154,10 +158,10 @@ export default {
     };
   },
   computed: {
-    sublinks () {
+    sublinks() {
       if (this.$nuxt._route.matched[0]) {
         const res = this.menu.filter(row =>
-          this.$nuxt._route.matched[0].path.includes(row.to)
+          this.$nuxt._route.matched[0].path.includes(row.to),
         )[0];
         if (res) {
           return res.subLinks;

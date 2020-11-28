@@ -10,231 +10,235 @@
   >
     <grid-item
       v-for="item in layout"
+      :key="item.i"
       :static="item.static"
       :x="item.x"
       :y="item.y"
       :w="item.w"
       :h="item.h"
       :i="item.i"
-      ><SContainer class="h-full w-full" :title="itemTitle(item)">
-        <component :is="item.component" class="h-full w-full"> </component>
+    >
+      <SContainer class="h-full w-full" :title="itemTitle(item)">
+        <component :is="item.component" class="h-full w-full" />
       </SContainer>
     </grid-item>
   </grid-layout>
 </template>
 
 <script>
-import { GridLayout, GridItem } from "vue-grid-layout";
-import DonutChart from "../echarts/SpeedChart";
-import RadialChart from "../charts/RadialChart";
-import BarChart from "../charts/BarChart";
+import { GridLayout, GridItem } from 'vue-grid-layout';
+import DonutChart from '../echarts/SpeedChart';
+import RadialChart from '../charts/RadialChart';
+import BarChart from '../charts/BarChart';
+import tv from '../pixijs/trackmap';
 export default {
   components: {
     GridLayout,
     GridItem,
     DonutChart,
     RadialChart,
-    BarChart
+    BarChart,
+    tv,
   },
   data() {
     return {
-      currentTabComponent: "SContainer",
+      currentTabComponent: 'SContainer',
       layout: [
         {
           x: 0,
           y: 0,
           w: 2,
           h: 2,
-          i: "0",
+          i: '0',
           static: false,
-          component: "BarChart"
+          component: 'BarChart',
         },
         {
           x: 2,
           y: 0,
           w: 2,
           h: 4,
-          i: "1",
+          i: '1',
           static: true,
-          component: "DonutChart"
+          component: 'DonutChart',
         },
         {
           x: 4,
           y: 0,
           w: 2,
           h: 5,
-          i: "2",
+          i: '2',
           static: false,
-          component: "RadialChart"
+          component: 'RadialChart',
         },
         {
           x: 6,
           y: 0,
           w: 2,
           h: 3,
-          i: "3",
+          i: '3',
           static: false,
-          component: "RadialChart"
+          component: 'RadialChart',
         },
         {
           x: 8,
           y: 0,
           w: 2,
           h: 3,
-          i: "4",
+          i: '4',
           static: false,
-          component: "RadialChart"
+          component: 'RadialChart',
         },
         {
           x: 10,
           y: 0,
           w: 2,
           h: 3,
-          i: "5",
+          i: '5',
           static: false,
-          component: "RadialChart"
+          component: 'tv',
         },
         {
           x: 0,
           y: 5,
           w: 2,
           h: 5,
-          i: "6",
+          i: '6',
           static: false,
-          component: "DonutChart"
+          component: 'DonutChart',
         },
         {
           x: 2,
           y: 5,
           w: 2,
           h: 5,
-          i: "7",
+          i: '7',
           static: false,
-          component: "BarChart"
+          component: 'BarChart',
         },
         {
           x: 4,
           y: 5,
           w: 2,
           h: 5,
-          i: "8",
+          i: '8',
           static: false,
-          component: "DonutChart"
+          component: 'DonutChart',
         },
         {
           x: 6,
           y: 3,
           w: 2,
           h: 4,
-          i: "9",
+          i: '9',
           static: true,
-          component: "BarChart"
+          component: 'BarChart',
         },
         {
           x: 8,
           y: 4,
           w: 2,
           h: 4,
-          i: "10",
+          i: '10',
           static: false,
-          component: "DonutChart"
+          component: 'DonutChart',
         },
         {
           x: 10,
           y: 4,
           w: 2,
           h: 4,
-          i: "11",
+          i: '11',
           static: false,
-          component: "DonutChart"
+          component: 'DonutChart',
         },
         {
           x: 0,
           y: 10,
           w: 2,
           h: 5,
-          i: "12",
+          i: '12',
           static: false,
-          component: "DonutChart"
+          component: 'DonutChart',
         },
         {
           x: 2,
           y: 10,
           w: 2,
           h: 5,
-          i: "13",
+          i: '13',
           static: false,
-          component: "DonutChart"
+          component: 'DonutChart',
         },
         {
           x: 4,
           y: 8,
           w: 2,
           h: 4,
-          i: "14",
+          i: '14',
           static: false,
-          component: "DonutChart"
+          component: 'DonutChart',
         },
         {
           x: 6,
           y: 8,
           w: 2,
           h: 4,
-          i: "15",
+          i: '15',
           static: false,
-          component: "DonutChart"
+          component: 'DonutChart',
         },
         {
           x: 8,
           y: 10,
           w: 2,
           h: 5,
-          i: "16",
+          i: '16',
           static: false,
-          component: "DonutChart"
+          component: 'DonutChart',
         },
         {
           x: 10,
           y: 4,
           w: 2,
           h: 2,
-          i: "17",
+          i: '17',
           static: false,
-          component: "DonutChart"
+          component: 'DonutChart',
         },
         {
           x: 0,
           y: 9,
           w: 2,
           h: 3,
-          i: "18",
+          i: '18',
           static: false,
-          component: "DonutChart"
+          component: 'DonutChart',
         },
         {
           x: 2,
           y: 6,
           w: 2,
           h: 2,
-          i: "19",
+          i: '19',
           static: false,
-          component: "DonutChart"
-        }
+          component: 'DonutChart',
+        },
       ],
       draggable: true,
       resizable: true,
-      index: 0
+      index: 0,
     };
   },
   methods: {
     itemTitle(item) {
-      let result = item.i;
+      let result = item.i + ' ' + item.component;
       if (item.static) {
-        result += " - Static";
+        result += ' - Static';
       }
       return result;
-    }
-  }
+    },
+  },
 };
 </script>
 

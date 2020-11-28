@@ -1,7 +1,7 @@
 import { SVGPixi } from './svg-pixi';
 
 export class TrackOOP extends PIXI.Container {
-  constructor (path, tracklength) {
+  constructor(path, tracklength) {
     super();
     this.track = new SVGPixi(path);
     this.track.zIndex = 2;
@@ -12,7 +12,7 @@ export class TrackOOP extends PIXI.Container {
     this.sectors = [];
   }
 
-  readSvgPath (path) {
+  readSvgPath(path) {
     this.track.lineStyle(1.0, 0x000000);
     this.track.readSvgPath();
     this.track.closePath();
@@ -20,9 +20,9 @@ export class TrackOOP extends PIXI.Container {
     this.addChild(this.track);
   }
 
-  addPitlane (path) {
+  addPitlane(path) {
     this.pitlane = new SVGPixi(path);
-    this.pitlane.lineStyle(1, 0xFFFFFF);
+    this.pitlane.lineStyle(1, 0xffffff);
 
     this.pitlane.zIndex = 1;
 
@@ -30,7 +30,7 @@ export class TrackOOP extends PIXI.Container {
     this.addChild(this.pitlane);
   }
 
-  addSector (path, sectorName, color = 0xFF00FF) {
+  addSector(path, sectorName, color = 0xff00ff) {
     this.sectors[sectorName] = new SVGPixi(path);
     this.sectors[sectorName].lineStyle(1, color);
     this.sectors[sectorName].zIndex = 3;
@@ -39,12 +39,12 @@ export class TrackOOP extends PIXI.Container {
     this.addChild(this.sectors[sectorName]);
   }
 
-  redraw () {
+  redraw() {
     const test = this.track.clone();
 
     this.track.geometry.graphicsData[1] = this.track.geometry.graphicsData[0].clone();
     this.track.geometry.graphicsData[1].lineStyle = this.track.geometry.graphicsData[0].lineStyle.clone();
-    this.track.geometry.graphicsData[1].lineStyle.color = 0xFFFFFF;
+    this.track.geometry.graphicsData[1].lineStyle.color = 0xffffff;
     this.track.geometry.graphicsData[1].lineStyle.width = 5;
     this.track.geometry.graphicsData[2] = this.track.geometry.graphicsData[0].clone();
     this.track.geometry.graphicsData[2].lineStyle = this.track.geometry.graphicsData[0].lineStyle.clone();
@@ -53,28 +53,28 @@ export class TrackOOP extends PIXI.Container {
     this.track.geometry.invalidate();
 
     // sectors
-    this.drawMarker(800, 's2', 10, 2, 0xFF0000, 'S2');
-    this.drawMarker(1758, 's3', 10, 2, 0xFF00FF, 'S3');
+    this.drawMarker(800, 's2', 10, 2, 0xff0000, 'S2');
+    this.drawMarker(1758, 's3', 10, 2, 0xff00ff, 'S3');
 
     // corner names
-    this.drawMarker(150, '1', 10, 1, 0xF0F0F0, '1');
+    this.drawMarker(150, '1', 10, 1, 0xf0f0f0, '1');
 
     // corner names
-    this.drawMarker(260, '1', 10, 1, 0xF0F0F0, '2');
-    this.drawMarker(380, '1', 10, 1, 0xF0F0F0, '3');
-    this.drawMarker(410, '1', 10, 1, 0xF0F0F0, '4');
-    this.drawMarker(444, '1', 10, 1, 0xF0F0F0, '5');
-    this.drawMarker(570, '1', 10, 1, 0xF0F0F0, '6');
-    this.drawMarker(845, '1', 10, 1, 0xF0F0F0, '7', 1);
-    this.drawMarker(880, '1', 10, 1, 0xF0F0F0, '8', 1);
-    this.drawMarker(925, '1', 10, 1, 0xF0F0F0, '9', 1);
-    this.drawMarker(1065, '1', 10, 1, 0xF0F0F0, '9');
+    this.drawMarker(260, '1', 10, 1, 0xf0f0f0, '2');
+    this.drawMarker(380, '1', 10, 1, 0xf0f0f0, '3');
+    this.drawMarker(410, '1', 10, 1, 0xf0f0f0, '4');
+    this.drawMarker(444, '1', 10, 1, 0xf0f0f0, '5');
+    this.drawMarker(570, '1', 10, 1, 0xf0f0f0, '6');
+    this.drawMarker(845, '1', 10, 1, 0xf0f0f0, '7', 1);
+    this.drawMarker(880, '1', 10, 1, 0xf0f0f0, '8', 1);
+    this.drawMarker(925, '1', 10, 1, 0xf0f0f0, '9', 1);
+    this.drawMarker(1065, '1', 10, 1, 0xf0f0f0, '9');
     test.destroy();
   }
 
   // extra parts
 
-  createRect (x1, y1, x2, y2, color) {
+  createRect(x1, y1, x2, y2, color) {
     const graphics = new PIXI.Graphics();
 
     graphics.beginFill(color || 0x000000);
@@ -89,12 +89,12 @@ export class TrackOOP extends PIXI.Container {
     return graphics;
   }
 
-  addYellow (point, name, length, width, color) {
+  addYellow(point, name, length, width, color) {
     const first = this.track.getPointAtLength(point - 20);
     const middle = this.track.getPointAtLength(point);
     const second = this.track.getPointAtLength(point + 20);
 
-    const test = this.createRect(0, 0, width, length, 0xFCBA03);
+    const test = this.createRect(0, 0, width, length, 0xfcba03);
     test.position.x = middle.x;
     test.position.y = middle.y;
     test.name = name;
@@ -104,7 +104,15 @@ export class TrackOOP extends PIXI.Container {
     return test;
   }
 
-  drawMarker (point, name, length, width, color, placeText, textDistance = 14) {
+  drawMarker(
+    point,
+    name,
+    length,
+    width,
+    color,
+    placeText,
+    textDistance = 14,
+  ) {
     const first = this.track.getPointAtLength(point - 1);
     const middle = this.track.getPointAtLength(point);
     const second = this.track.getPointAtLength(point + 1);
@@ -118,11 +126,16 @@ export class TrackOOP extends PIXI.Container {
       const text = new PIXI.Text(placeText, {
         fontFamily: '"Courier New", Courier, monospace',
         fontSize: 8,
-        fill: 0xFFFFFF,
+        fill: 0xffffff,
         align: 'center',
       });
       text.pivot = { x: textDistance, y: 15 };
-      text.angle = -this.angle360(first.x, first.y, second.x, second.y);
+      text.angle = -this.angle360(
+        first.x,
+        first.y,
+        second.x,
+        second.y,
+      );
       text.resolution = 4;
       test.addChild(text);
     }
@@ -131,7 +144,7 @@ export class TrackOOP extends PIXI.Container {
     return test;
   }
 
-  angle (cx, cy, ex, ey) {
+  angle(cx, cy, ex, ey) {
     const dy = ey - cy;
     const dx = ex - cx;
     let theta = Math.atan2(dy, dx); // range (-PI, PI]
@@ -139,16 +152,18 @@ export class TrackOOP extends PIXI.Container {
     return theta;
   }
 
-  angle360 (cx, cy, ex, ey) {
+  angle360(cx, cy, ex, ey) {
     let theta = this.angle(cx, cy, ex, ey); // range (-180, 180]
     if (theta < 0) theta = 360 + theta; // range [0, 360)
     return theta;
   }
 
-  getPointAtLength (length) {
+  getPointAtLength(length) {
     return this.track.getPointAtLength(length);
   }
-  getPointAtPercentage (percentage) {
-    return this.track.getPointAtLength((this.track.getTotalLength() / 100) * percentage);
+  getPointAtPercentage(percentage) {
+    return this.track.getPointAtLength(
+      (this.track.getTotalLength() / 100) * percentage,
+    );
   }
 }

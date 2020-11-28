@@ -1,7 +1,11 @@
 <template>
   <div class="marquee">
     <div class="rotating">
-      <div v-for="(car, index) in allCars" :key="car.realdeal.EntryNumber" class="car-row">
+      <div
+        v-for="(car, index) in allCars"
+        :key="car.realdeal.EntryNumber"
+        class="car-row"
+      >
         <span class="car-pos">{{ index + 1 }}</span>
         <span class="car-num">{{ car.realdeal.EntryNumber }}</span>
         <span :class="'car-class rotate-30 ' + car.realdeal.category">&nbsp;</span>
@@ -44,8 +48,14 @@ export default {
 
 .car-row {
   display: inline-block;
-  background: rgb(0,0,38);
-  background: linear-gradient( rgba(0,0,38,1) 0%, rgba(22,22,64,1) 34%, rgba(29,28,65,1) 46%, rgba(18,17,59,1) 69%, rgba(3,2,38,1) 100%);
+  background: rgb(0, 0, 38);
+  background: linear-gradient(
+    rgba(0, 0, 38, 1) 0%,
+    rgba(22, 22, 64, 1) 34%,
+    rgba(29, 28, 65, 1) 46%,
+    rgba(18, 17, 59, 1) 69%,
+    rgba(3, 2, 38, 1) 100%
+  );
   border-bottom-left-radius: 6px;
   margin-left: 5px;
   border-top-right-radius: 4px;

@@ -9,7 +9,7 @@ export const state = () => ({
 });
 
 export const actions = {
-  SOCKET_entryAsk (context, data) {
+  SOCKET_entryAsk(context, data) {
     const user = remote.getGlobal('user');
     user.id = data;
     const sendData = {};
@@ -18,27 +18,27 @@ export const actions = {
     context.commit('UPDATEUSER', sendData);
     this._vm.$socket.emit('entry', sendData);
   },
-  SOCKET_updateChat (context, data) {
+  SOCKET_updateChat(context, data) {
     context.commit('UPDATECHAT', data);
   },
 };
 
 export const mutations = {
-  UPDATEUSER (state, data) {
+  UPDATEUSER(state, data) {
     state.user.username = data.username;
     state.user.entryNumber = data.entryNumber;
   },
-  UPDATECHAT (state, data) {
+  UPDATECHAT(state, data) {
     console.log(data);
     state.chat.push(data);
   },
 };
 
 export const getters = {
-  getUser (state) {
+  getUser(state) {
     return state.user;
   },
-  getChat (state) {
+  getChat(state) {
     return state.chat;
   },
 };

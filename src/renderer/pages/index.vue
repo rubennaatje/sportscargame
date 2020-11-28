@@ -3,23 +3,19 @@
 </template>
 
 <script>
-import { remote } from "electron";
-import SystemInformation from "@/components/SystemInformation.vue";
+import { remote } from 'electron';
 
 export default {
-  components: {
-    SystemInformation
-  },
   data() {
     return {
-      externalContent: ""
+      externalContent: '',
     };
   },
   methods: {
     openURL(url) {
       remote.shell.openExternal(url);
-    }
-  }
+    },
+  },
 };
 </script>
 

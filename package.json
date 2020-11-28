@@ -9,6 +9,7 @@
     "test": "",
     "lint": "node_modules/.bin/eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter ./src",
     "lint:fix": "yarn run lint -- --fix",
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
     "preinstall": "node .electron-nuxt/check-engines.js",
     "postinstall": "electron-builder install-app-deps & yarn run lint:fix"
   },
@@ -57,12 +58,16 @@
     "typeface-inter": "^3.12.0",
     "vue-apexcharts": "^1.5.3",
     "vue-flag-icon": "^1.0.6",
+    "vue-prevent-parent-scroll": "^1.0.5",
     "vue-socket.io": "^3.0.9",
     "webpack": "4.43.0",
     "webpack-node-externals": "1.7.2"
   },
   "dependencies": {
     "echarts": "^4.9.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.2.1",
     "vue-echarts": "^5.0.0-beta.0",
     "vue-grid-layout": "^2.3.11"
   }

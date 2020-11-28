@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="battle">
-      <div class="classname">LMP1</div>Battle for 5th place
+      <div class="classname">LMP1</div>
+      Battle for 5th place
     </div>
     <ul>
       <li class="car-row">
@@ -40,7 +41,7 @@
   background-color: red;
   color: white;
   font-weight: bolder;
-    border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 .battle {
   clip-path: polygon(0 1%, 96% 0, 100% 100%, 0% 100%);
@@ -75,11 +76,11 @@
   border-top-left-radius: 15px;
 }
 
-ul>li::after {
-    content: "";
-    padding-left: 0;
+ul > li::after {
+  content: '';
+  padding-left: 0;
 }
-ul>li {
+ul > li {
   padding-left: 0;
 }
 ul {

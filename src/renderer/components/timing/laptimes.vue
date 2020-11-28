@@ -1,33 +1,15 @@
 <template>
   <table>
     <thead>
-      <th>
-        #
-      </th>
-      <th>
-        category
-      </th>
-      <th>
-        car
-      </th>
-      <th>
-        driver
-      </th>
-      <th>
-        current speed
-      </th>
-      <th>
-        laps
-      </th>
-      <th>
-        s2
-      </th>
-      <th>
-        s3
-      </th>
-      <th>
-        last lap
-      </th>
+      <th>#</th>
+      <th>category</th>
+      <th>car</th>
+      <th>driver</th>
+      <th>current speed</th>
+      <th>laps</th>
+      <th>s2</th>
+      <th>s3</th>
+      <th>last lap</th>
     </thead>
     <tbody>
       <tr v-for="todo in allSprints" :key="todo.carnumber">
@@ -49,15 +31,9 @@
         <td>
           {{ todo.laps }}
         </td>
-        <td>
-          1
-        </td>
-        <td>
-          21
-        </td>
-        <td>
-          2:01
-        </td>
+        <td>1</td>
+        <td>21</td>
+        <td>2:01</td>
       </tr>
     </tbody>
   </table>

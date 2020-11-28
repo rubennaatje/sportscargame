@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       chrome: process.versions.chrome,
       electron: process.versions.electron,
@@ -70,7 +70,7 @@ export default {
 }
 span.session-timer {
   font-weight: bolder;
-  background-color:var(--background-color);
+  background-color: var(--background-color);
   color: black;
   padding: 5px;
 }

@@ -16,6 +16,7 @@ module.exports = {
     { ssr: false, src: '@/plugins/vueapexcharts.js' },
     { ssr: false, src: '@/plugins/vue-grid-layout.js' },
     { ssr: false, src: '@/plugins/echarts.js' },
+    { ssr: false, src: '@/plugins/prevent-parent-scroll.js' },
     { src: '@/plugins/vue-flags.js' },
     { src: '~/plugins/pixijs', mode: 'client', ssr: false },
   ],
@@ -27,13 +28,8 @@ module.exports = {
     // TODO: Remove when upgrading to nuxt 2.13+
     '@nuxt/components',
   ],
-  modules: [
-    'nuxt-spreadsheet',
-  ],
-  css: [
-    'terminal.css',
-    'typeface-inter',
-  ],
+  modules: ['nuxt-spreadsheet'],
+  css: ['terminal.css', 'typeface-inter'],
   bodyAttrs: {
     class: 'terminal"',
   },

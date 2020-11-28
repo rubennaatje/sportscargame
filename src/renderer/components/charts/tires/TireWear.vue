@@ -10,10 +10,9 @@
 </template>
 
 <script>
-
 export default {
   props: { tire: { type: String, default: '' } },
-  data () {
+  data() {
     return {
       series: [70],
       chartOptions: {

@@ -15,7 +15,10 @@ electronDebug({
 // which seems to be a result of https://github.com/electron/electron/issues/19468
 if (process.platform === 'win32') {
   const appUserDataPath = app.getPath('userData');
-  const devToolsExtensionsPath = path.join(appUserDataPath, 'DevTools Extensions');
+  const devToolsExtensionsPath = path.join(
+    appUserDataPath,
+    'DevTools Extensions',
+  );
   try {
     fs.unlinkSync(devToolsExtensionsPath);
   } catch (_) {
@@ -37,7 +40,7 @@ app.on('ready', () => {
   Menu.setApplicationMenu(menu);
 });
 
-mainWinHandler.onCreated(browserWindow => {
+mainWinHandler.onCreated((browserWindow) => {
   browserWindow.webContents.openDevTools();
 });
 

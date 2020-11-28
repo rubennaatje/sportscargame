@@ -10,10 +10,13 @@
           new Date(chatMessage.time).toISOString().substr(11, 8)
         }}</span>
         <span :class="chatMessage.chatSender.class + '-chat'">#{{ chatMessage.chatSender.entryNumber }}
-          <span v-if="showTeamName"> Toyota Gazoo Racing |</span></span>
+          <span v-if="showTeamName">
+            Toyota Gazoo Racing |</span></span>
         <span
           class="username"
-          :style="'color: ' + hashCode(chatMessage.chatSender.user) + ';'"
+          :style="
+            'color: ' + hashCode(chatMessage.chatSender.user) + ';'
+          "
         >
           {{ chatMessage.chatSender.user }}</span>
       </div>
@@ -43,7 +46,7 @@ export default {
       default: false,
     },
   },
-  data () {
+  data() {
     return {
       message: '',
     };
@@ -52,14 +55,14 @@ export default {
     ...mapGetters({ chat: 'user/getChat' }),
   },
   methods: {
-    sendMessage () {
+    sendMessage() {
       this.$socket.emit('sendMessage', {
         message: this.message,
         visibility: 'all',
       });
       this.message = '';
     },
-    hashCode (str) {
+    hashCode(str) {
       let hash = 0;
       for (let i = 0; i < str.length; i++) {
         hash = str.charCodeAt(i) + ((hash << 5) - hash);

@@ -1,7 +1,7 @@
-const path = require('path')
+const path = require('path');
 
-const PROJECT_ROOT = path.join(__dirname, '..')
-const SRC_DIR = path.join(PROJECT_ROOT, 'src')
+const PROJECT_ROOT = path.join(__dirname, '..');
+const SRC_DIR = path.join(PROJECT_ROOT, 'src');
 
 const config = {
   ELECTRON_RELAUNCH_CODE: 250, // valid range in unix system: <1,255>
@@ -17,7 +17,7 @@ const config = {
   DIST_DIR: path.join(PROJECT_ROOT, 'dist'),
   BUILD_DIR: path.join(PROJECT_ROOT, 'build'),
 
-  DISABLE_BABEL_LOADER: false // experimental
-}
+  DISABLE_BABEL_LOADER: false, // experimental
+};
 
-module.exports = Object.freeze(config)
+module.exports = Object.freeze(config);

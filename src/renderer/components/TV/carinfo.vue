@@ -1,11 +1,20 @@
 <template>
   <div>
-    <div class="mx-auto object-center ">
-      <img class="driverpic" src="https://storage.googleapis.com/ecm-prod/assets/1/pilote/1915/portrait-vergne-jean-eric-mpsa-mlmc-mon18-sp1-2410_375b21.png">
-      <img class="driverpic" src="https://storage.googleapis.com/ecm-prod/assets/1/pilote/107/portrait_Roman_RUSINOV_GR8R9381_025941.png">
-      <img class="driverpic" src="https://storage.googleapis.com/ecm-prod/assets/1/pilote/2233/job-van-uitert_7334b6.png">
+    <div class="mx-auto object-center">
+      <img
+        class="driverpic"
+        src="https://storage.googleapis.com/ecm-prod/assets/1/pilote/1915/portrait-vergne-jean-eric-mpsa-mlmc-mon18-sp1-2410_375b21.png"
+      >
+      <img
+        class="driverpic"
+        src="https://storage.googleapis.com/ecm-prod/assets/1/pilote/107/portrait_Roman_RUSINOV_GR8R9381_025941.png"
+      >
+      <img
+        class="driverpic"
+        src="https://storage.googleapis.com/ecm-prod/assets/1/pilote/2233/job-van-uitert_7334b6.png"
+      >
     </div>
-    <div class="car-row ">
+    <div class="car-row">
       <span class="car-pos">1</span>
       <span class="car-num">26</span>
       <span :class="'car-class rotate-30 lmp2'">&nbsp;</span>
@@ -13,7 +22,7 @@
         G Drive racing
         <flag iso="ru" />
       </span>
-      <br>
+      <br />
       <span class="racing-driver-name">
         Jean Eric Vergne
         <flag iso="fr" />
@@ -27,19 +36,23 @@
         <flag iso="nl" />
       </span>
     </div>
-    <img class="x-auto object-center" src="https://storage.googleapis.com/ecm-prod/assets/1/engage/43184/2019-wec-26-oreca-07-droite-900-x-260-px_23de99.png" style="max-width: 500px">
+    <img
+      class="x-auto object-center"
+      src="https://storage.googleapis.com/ecm-prod/assets/1/engage/43184/2019-wec-26-oreca-07-droite-900-x-260-px_23de99.png"
+      style="max-width: 500px"
+    >
   </div>
 </template>
 
 <style scoped>
 img.driverpic {
-    max-width: 160px;
-    max-height: 500px;
-    display: inline-block;
-    align-content: center;
-    align-self: center;
-    left: auto;
-    right: auto;
+  max-width: 160px;
+  max-height: 500px;
+  display: inline-block;
+  align-content: center;
+  align-self: center;
+  left: auto;
+  right: auto;
 }
 .car-row {
   display: inline-block;
@@ -96,12 +109,12 @@ img.driverpic {
 }
 
 .racing-driver-name {
-    color: grey;
-    font-weight: lighter;
+  color: grey;
+  font-weight: lighter;
 }
 
 .racing-driver-name.active {
-    color: white;
-    font-weight: bold;
+  color: white;
+  font-weight: bold;
 }
 </style>
