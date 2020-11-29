@@ -2,12 +2,14 @@
   <div class="max-w-md mx-auto text-center m-1">
     <span class="timing-span"> 10:10:43 </span> <br />
     <span v-if="safetyCar" class="timing-span safety-car">
-      SAFETY CAR</span>
+      SAFETY CAR</span
+    >
     <span v-if="FCY" cclass="timing-span fcy"> FCY</span>
     <span v-if="red" cclass="timing-span redflag"> RED</span>
     <span v-if="finish" cclass="timing-span finish"> Finish</span>
     <span v-if="slowzones" cclass="timing-span slowzones">
-      Finish</span>
+      Finish</span
+    >
     <span v-if="code60" cclass="timing-span code-60"> Code 60</span>
   </div>
 </template>

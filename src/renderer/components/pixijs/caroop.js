@@ -56,6 +56,10 @@ export class CarOOP extends PIXI.Container {
     this.addChild(this.car);
   }
 
+  setAnnotationScale(scale = 1) {
+    this.annotation.scale.set(scale, scale);
+  }
+
   addAnnotation(
     text,
     color = 0x2c3e50,

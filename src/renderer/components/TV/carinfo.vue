@@ -4,15 +4,15 @@
       <img
         class="driverpic"
         src="https://storage.googleapis.com/ecm-prod/assets/1/pilote/1915/portrait-vergne-jean-eric-mpsa-mlmc-mon18-sp1-2410_375b21.png"
-      >
+      />
       <img
         class="driverpic"
         src="https://storage.googleapis.com/ecm-prod/assets/1/pilote/107/portrait_Roman_RUSINOV_GR8R9381_025941.png"
-      >
+      />
       <img
         class="driverpic"
         src="https://storage.googleapis.com/ecm-prod/assets/1/pilote/2233/job-van-uitert_7334b6.png"
-      >
+      />
     </div>
     <div class="car-row">
       <span class="car-pos">1</span>
@@ -40,7 +40,7 @@
       class="x-auto object-center"
       src="https://storage.googleapis.com/ecm-prod/assets/1/engage/43184/2019-wec-26-oreca-07-droite-900-x-260-px_23de99.png"
       style="max-width: 500px"
-    >
+    />
   </div>
 </template>
 

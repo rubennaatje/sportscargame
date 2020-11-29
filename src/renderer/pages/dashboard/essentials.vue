@@ -26,7 +26,8 @@
       >
         <div>
           LL:
-          <span class="better"><span class="green-text">3.2</span>L
+          <span class="better"
+            ><span class="green-text">3.2</span>L
           </span>
         </div>
         <div>AVG: <span class="green-text">4.2</span>L</div>

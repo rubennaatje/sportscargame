@@ -8,7 +8,7 @@
     "build": "node .electron-nuxt/build.js",
     "test": "",
     "lint": "node_modules/.bin/eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter ./src",
-    "lint:fix": "yarn run lint -- --fix",
+    "lint:fix": "yarn run lint --fix",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
     "preinstall": "node .electron-nuxt/check-engines.js",
     "postinstall": "electron-builder install-app-deps & yarn run lint:fix"
@@ -24,6 +24,7 @@
     "@types/node": "12.12.6"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
     "@mdi/font": "5.2.45",
     "@nuxt/components": "^0.2.3",
     "@nuxtjs/eslint-config": "1.1.2",

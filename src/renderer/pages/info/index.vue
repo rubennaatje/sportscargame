@@ -12,8 +12,9 @@
       </p>
       <h2 id="markdown-terminal-css">Markdown ❤️ Terminal CSS</h2>
       <p>
-        It's perfect for your <em>personal website</em>,
-        <em>blog</em>, or <em>side project</em>.
+        It's perfect for your
+        <em>personal website</em>, <em>blog</em>, or
+        <em>side project</em>.
       </p>
       <h2 id="how-to-use">How to use</h2>
       <p>
@@ -25,9 +26,14 @@
         Terminal CSS is also available via
         <a
           href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css"
-        >CDN</a>
+          >CDN</a
+        >
       </p>
-      <pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css"</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css"</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css"</span> /&gt;</span></code></pre>
+      <pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css"</span> /&gt;</span><span
+        class="hljs-tag"
+      >&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css"</span> /&gt;</span><span
+        class="hljs-tag"
+      >&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css"</span> /&gt;</span></code></pre>
       <h2 id="themes">Themes</h2>
       <p>
         To create your own theme just open the dev-tools and edit the
@@ -37,14 +43,19 @@
 
       <h2 id="contributers">Contributers</h2>
       <ul>
-        <li><a href="https://othyn.com/">Ben</a></li>
+        <li>
+          <a href="https://othyn.com/">Ben</a>
+        </li>
         <li>
           <a href="https://matiaskorhonen.fi/">Matias Korhonen</a>
         </li>
       </ul>
       <br />
 
-      <p>With ❤️ by <a href="https://jduri.com">Jonas D.</a></p>
+      <p>
+        With ❤️ by
+        <a href="https://jduri.com">Jonas D.</a>
+      </p>
 
       <hr />
       <div class="components components-grid">
@@ -52,27 +63,59 @@
           <h2>Components</h2>
           <nav>
             <ul>
-              <li><a href="#GridSystem">Grid System</a></li>
-              <li><a href="#Navigation">Navigation</a></li>
-              <li><a href="#NavigationList">Navigation List</a></li>
-              <li><a href="#Lists">Lists</a></li>
-              <li><a href="#Typography">Typography</a></li>
-              <li><a href="#Tables">Tables</a></li>
+              <li>
+                <a href="#GridSystem">Grid System</a>
+              </li>
+              <li>
+                <a href="#Navigation">Navigation</a>
+              </li>
+              <li>
+                <a href="#NavigationList">Navigation List</a>
+              </li>
+              <li>
+                <a href="#Lists">Lists</a>
+              </li>
+              <li>
+                <a href="#Typography">Typography</a>
+              </li>
+              <li>
+                <a href="#Tables">Tables</a>
+              </li>
               <li>
                 <a href="#SpecialElements">Special Elements</a>
                 <ul>
-                  <li><a href="#Blockquote">Blockquote</a></li>
-                  <li><a href="#Misc">Misc</a></li>
+                  <li>
+                    <a href="#Blockquote">Blockquote</a>
+                  </li>
+                  <li>
+                    <a href="#Misc">Misc</a>
+                  </li>
                 </ul>
               </li>
-              <li><a href="#Forms">Forms</a></li>
-              <li><a href="#Progress">Progress Bar</a></li>
-              <li><a href="#Buttons">Buttons</a></li>
-              <li><a href="#Cards">Cards</a></li>
-              <li><a href="#Timeline">Timeline</a></li>
-              <li><a href="#Alerts">Alerts</a></li>
-              <li><a href="#Media">Media</a></li>
-              <li><a href="#Figure">Image with caption</a></li>
+              <li>
+                <a href="#Forms">Forms</a>
+              </li>
+              <li>
+                <a href="#Progress">Progress Bar</a>
+              </li>
+              <li>
+                <a href="#Buttons">Buttons</a>
+              </li>
+              <li>
+                <a href="#Cards">Cards</a>
+              </li>
+              <li>
+                <a href="#Timeline">Timeline</a>
+              </li>
+              <li>
+                <a href="#Alerts">Alerts</a>
+              </li>
+              <li>
+                <a href="#Media">Media</a>
+              </li>
+              <li>
+                <a href="#Figure">Image with caption</a>
+              </li>
               <li>
                 <a href="#highlightjs">Supports Highlight.js</a>
               </li>
@@ -82,8 +125,12 @@
           <h2>Documentation</h2>
           <nav>
             <ul>
-              <li><a href="#DocVariables">Variables</a></li>
-              <li><a href="#DocTypography">Typography</a></li>
+              <li>
+                <a href="#DocVariables">Variables</a>
+              </li>
+              <li>
+                <a href="#DocTypography">Typography</a>
+              </li>
             </ul>
           </nav>
         </aside>
@@ -98,53 +145,69 @@
               </p>
             </header>
             <div class="image-grid">
-              <a href="https://picsum.photos" style="border: none"><img
-                src="https://picsum.photos/200/300?random&amp;1"
-                width="auto"
-                height="auto"
-                alt="random image"
-              ></a>
-              <a href="https://picsum.photos" style="border: none"><img
-                src="https://picsum.photos/200/300?random&amp;2"
-                width="auto"
-                height="auto"
-                alt="random image"
-              ></a>
-              <a href="https://picsum.photos" style="border: none"><img
-                src="https://picsum.photos/200/300?random&amp;3"
-                width="auto"
-                height="auto"
-                alt="random image"
-              ></a>
-              <a href="https://picsum.photos" style="border: none"><img
-                src="https://picsum.photos/200/300?random&amp;4"
-                width="auto"
-                height="auto"
-                alt="random image"
-              ></a>
-              <a href="https://picsum.photos" style="border: none"><img
-                src="https://picsum.photos/200/300?random&amp;5"
-                width="auto"
-                height="auto"
-                alt="random image"
-              ></a>
-              <a href="https://picsum.photos" style="border: none"><img
-                src="https://picsum.photos/200/300?random&amp;6"
-                width="auto"
-                height="auto"
-                alt="random image"
-              ></a>
-              <a href="https://picsum.photos" style="border: none"><img
-                src="https://picsum.photos/200/300?random&amp;7"
-                width="auto"
-                height="auto"
-                alt="random image"
-              ></a>
+              <a href="https://picsum.photos" style="border: none">
+                <img
+                  src="https://picsum.photos/200/300?random&amp;1"
+                  width="auto"
+                  height="auto"
+                  alt="random image"
+                />
+              </a>
+              <a href="https://picsum.photos" style="border: none">
+                <img
+                  src="https://picsum.photos/200/300?random&amp;2"
+                  width="auto"
+                  height="auto"
+                  alt="random image"
+                />
+              </a>
+              <a href="https://picsum.photos" style="border: none">
+                <img
+                  src="https://picsum.photos/200/300?random&amp;3"
+                  width="auto"
+                  height="auto"
+                  alt="random image"
+                />
+              </a>
+              <a href="https://picsum.photos" style="border: none">
+                <img
+                  src="https://picsum.photos/200/300?random&amp;4"
+                  width="auto"
+                  height="auto"
+                  alt="random image"
+                />
+              </a>
+              <a href="https://picsum.photos" style="border: none">
+                <img
+                  src="https://picsum.photos/200/300?random&amp;5"
+                  width="auto"
+                  height="auto"
+                  alt="random image"
+                />
+              </a>
+              <a href="https://picsum.photos" style="border: none">
+                <img
+                  src="https://picsum.photos/200/300?random&amp;6"
+                  width="auto"
+                  height="auto"
+                  alt="random image"
+                />
+              </a>
+              <a href="https://picsum.photos" style="border: none">
+                <img
+                  src="https://picsum.photos/200/300?random&amp;7"
+                  width="auto"
+                  height="auto"
+                  alt="random image"
+                />
+              </a>
             </div>
           </section>
           <hr />
           <section>
-            <header><h2 id="Navigation">Navigation</h2></header>
+            <header>
+              <h2 id="Navigation">Navigation</h2>
+            </header>
             <div class="terminal-nav">
               <div class="terminal-logo">
                 <div class="logo terminal-prompt">
@@ -153,11 +216,17 @@
               </div>
               <nav class="terminal-menu">
                 <ul>
-                  <li><a class="menu-item" href="#">Item #1</a></li>
                   <li>
-                    <a class="menu-item active" href="#">Active Item #2</a>
+                    <a class="menu-item" href="#">Item #1</a>
                   </li>
-                  <li><a class="menu-item" href="#">Item #3</a></li>
+                  <li>
+                    <a class="menu-item active" href="#"
+                      >Active Item #2</a
+                    >
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Item #3</a>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -170,15 +239,27 @@
             </header>
             <nav>
               <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Members</a></li>
-                <li><a href="#">Settings</a></li>
+                <li>
+                  <a href="#">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#">Members</a>
+                </li>
+                <li>
+                  <a href="#">Settings</a>
+                </li>
                 <li>
                   <a href="#">Profile</a>
                   <ul>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="#">Billing</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li>
+                      <a href="#">Account</a>
+                    </li>
+                    <li>
+                      <a href="#">Billing</a>
+                    </li>
+                    <li>
+                      <a href="#">Logout</a>
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -187,7 +268,9 @@
 
           <hr />
           <section>
-            <header><h2 id="Lists">Lists</h2></header>
+            <header>
+              <h2 id="Lists">Lists</h2>
+            </header>
             <ul>
               <li>This is a list item</li>
               <li>So is this - there could be more</li>
@@ -203,7 +286,10 @@
               <li>A couple more</li>
               <li>Top-level list items</li>
             </ul>
-            <p>Don't forget <strong>Ordered lists</strong>:</p>
+            <p>
+              Don't forget
+              <strong>Ordered lists</strong>:
+            </p>
             <ol>
               <li>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -226,7 +312,7 @@
               <li>Aliquam tincidunt mauris eu risus.</li>
             </ol>
             <p>
-              <strong>Description lists </strong>are also included.
+              <strong>Description lists</strong>are also included.
             </p>
             <dl>
               <dt>Description list title 01</dt>
@@ -236,8 +322,9 @@
               <dd>Description list description 03</dd>
             </dl>
             <p>
-              A <strong>Table of content</strong>, which can be used
-              as an index for a blog archive.
+              A
+              <strong>Table of content</strong>, which can be used as
+              an index for a blog archive.
             </p>
             <p>
               Unlike regular lists, the TOC component
@@ -245,19 +332,25 @@
             </p>
             <ol class="terminal-toc">
               <li>
-                <a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit.</a>
+                <a href="#">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing
+                  elit.
+                </a>
               </li>
               <li>
-                <a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit.</a>
+                <a href="#">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing
+                  elit.
+                </a>
               </li>
               <li>
                 <a href="#">Aliquam tincidunt mauris eu risus.</a>
               </li>
               <li>
-                <a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit.</a>
+                <a href="#">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing
+                  elit.
+                </a>
               </li>
               <li>
                 <a href="#">Aliquam tincidunt mauris eu risus.</a>
@@ -388,48 +481,53 @@
                 like measuring aircraft building progress by weight.
               </p>
               <footer>
-                <cite><a href="http://www.thegatesnotes.com">Bill Gates</a></cite>
+                <cite>
+                  <a href="http://www.thegatesnotes.com"
+                    >Bill Gates</a
+                  >
+                </cite>
               </footer>
             </blockquote>
             <h3 id="Misc">Misc</h3>
             <h5 class="terminal-prompt">Terminal Prompt</h5>
             <p>
-              I am <a href="?abc123">the a tag</a> example<br />
               I am
-              <abbr title="test">the abbr tag</abbr> example<br />
-              I am <b>the b tag</b> example<br />
-              I am <cite>the cite tag</cite> example<br />
-              I am <code>the code tag</code> example<br />
-              I am <del>the del tag</del> example<br />
-              I am <dfn>the dfn tag</dfn> example<br />
-              I am <em>the em tag</em> example<br />
-              I am <i>the i tag</i> example<br />
-              I am <ins>the ins tag</ins> example<br />
-              I am <kbd>the kbd tag</kbd> example<br />
-              I am <q>the q tag</q> example<br />
-              I am <samp>the samp tag</samp> example<br />
-              I am <small>the small tag</small> example<br />
-              I am <span>the span tag</span> example<br />
-              I am <strong>the strong tag</strong> example<br />
-              I am <sub>the sub tag</sub> example<br />
-              I am <sup>the sup tag</sup> example<br />
-              I am <var>the var tag</var> example<br />
+              <a href="?abc123">the a tag</a> example <br />I am
+              <abbr title="test">the abbr tag</abbr> example <br />I
+              <b>the b tag</b> example <br />I am
+              <cite>the cite tag</cite> example <br />I am
+              <code>the code tag</code> example <br />I am
+              <del>the del tag</del> example <br />I am
+              <dfn>the dfn tag</dfn> example <br />I am
+              <em>the em tag</em> example <br />I am
+              <i>the i tag</i> example <br />I am
+              <ins>the ins tag</ins> example <br />I am
+              <kbd>the kbd tag</kbd> example <br />I am
+              <q>the q tag</q> example <br />I am
+              <samp>the samp tag</samp> example <br />I am
+              <small>the small tag</small> example <br />I am
+              <span>the span tag</span> example <br />I am
+              <strong>the strong tag</strong> example <br />I am
+              <sub>the sub tag</sub> example <br />I am
+              <sup>the sup tag</sup> example <br />I am
+              <var>the var tag</var> example
+              <br />
             </p>
 
             <h4 id="Address">Address</h4>
             <address>
-              Mozilla Foundation<br />
-              1981 Landings Drive<br />
-              Building K<br />
-              Mountain View, CA 94043-0801<br />
-              USA
+              Mozilla Foundation
+              <br />1981 Landings Drive <br />Building K
+              <br />Mountain View, CA 94043-0801 <br />USA
             </address>
             <br />
           </section>
 
           <hr />
           <section>
-            <header><h2 id="Forms">Forms</h2></header>
+            <header>
+              <h2 id="Forms">Forms</h2>
+            </header>
             <form action="#">
               <fieldset>
                 <legend>Form legend</legend>
@@ -439,10 +537,10 @@
                     id="email"
                     name="email"
                     type="email"
-                    required=""
+                    required
                     minlength="5"
                     placeholder="test"
-                  >
+                  />
                 </div>
                 <div class="form-group">
                   <label for="text">Text input:</label>
@@ -450,19 +548,21 @@
                     id="text"
                     name="text"
                     type="text"
-                    required=""
+                    required
                     minlength="5"
                     placeholder="test"
-                  >
+                  />
                 </div>
                 <div class="form-group">
-                  <label for="itext">Invalid input (min-length 10):</label>
+                  <label for="itext"
+                    >Invalid input (min-length 10):</label
+                  >
                   <input
                     id="itext"
                     name="itext"
                     type="text"
                     minlength="10"
-                  >
+                  />
                 </div>
                 <div class="form-group">
                   <label for="pw">Password input:</label>
@@ -471,7 +571,7 @@
                     type="password"
                     name="pw"
                     value="password"
-                  >
+                  />
                 </div>
                 <div class="form-group">
                   <label for="radio">Radio input:</label>
@@ -494,9 +594,10 @@
                     id="tarea"
                     cols="30"
                     rows="5"
-                    name="=&quot;tarea&quot;"
+                    name='="tarea"'
                   >
-Textarea text</textarea>
+Textarea text</textarea
+                  >
                 </div>
                 <div class="form-group">
                   <label for="submit">Input Button:</label>
@@ -515,7 +616,9 @@ Textarea text</textarea>
           </section>
           <hr />
           <section>
-            <header><h2 id="Progress">Progress Bar</h2></header>
+            <header>
+              <h2 id="Progress">Progress Bar</h2>
+            </header>
             <br />
             <p>With only an arrow</p>
             <div class="progress-bar">
@@ -542,22 +645,38 @@ Textarea text</textarea>
 
           <hr />
           <section>
-            <header><h2 id="Buttons">Buttons</h2></header>
-            <button class="btn btn-default">Default</button><br ><br >
-            <button class="btn btn-primary">Primary</button><br ><br >
-            <button class="btn btn-error">Error</button><br /><br />
+            <header>
+              <h2 id="Buttons">Buttons</h2>
+            </header>
+            <button class="btn btn-default">Default</button>
+            <br />
+            <br />
+            <button class="btn btn-primary">Primary</button>
+            <br />
+            <br />
+            <button class="btn btn-error">Error</button>
+            <br />
+            <br />
             <button class="btn btn-default btn-ghost">
               Ghost Button
-</button><br ><br >
+            </button>
+            <br />
+            <br />
             <button class="btn btn-primary btn-ghost">
               Ghost Button
-</button><br ><br >
+            </button>
+            <br />
+            <br />
             <button class="btn btn-error btn-ghost">
               Ghost Button
-</button><br ><br >
+            </button>
+            <br />
+            <br />
             <button class="btn btn-primary btn-block">
               Block Level Button
-</button><br ><br >
+            </button>
+            <br />
+            <br />
             <p>Button Group</p>
             <div class="btn-group">
               <button class="btn btn-default btn-ghost">Left</button>
@@ -571,7 +690,9 @@ Textarea text</textarea>
 
           <hr />
           <section>
-            <header><h2 id="Cards">Cards</h2></header>
+            <header>
+              <h2 id="Cards">Cards</h2>
+            </header>
             <div class="terminal-card">
               <header>Card Title</header>
               <div>
@@ -586,7 +707,9 @@ Textarea text</textarea>
 
           <hr />
           <section>
-            <header><h2 id="Timeline">Timeline</h2></header>
+            <header>
+              <h2 id="Timeline">Timeline</h2>
+            </header>
             <div class="terminal-timeline">
               <div class="terminal-card">
                 <header>Card Title</header>
@@ -612,7 +735,9 @@ Textarea text</textarea>
 
           <hr />
           <section>
-            <header><h2 id="Alerts">Alerts</h2></header>
+            <header>
+              <h2 id="Alerts">Alerts</h2>
+            </header>
             <div class="terminal-alert">Default message</div>
             <div class="terminal-alert terminal-alert-primary">
               Primary message
@@ -623,13 +748,15 @@ Textarea text</textarea>
           </section>
           <hr />
           <section>
-            <header><h2 id="Figure">Image with caption</h2></header>
+            <header>
+              <h2 id="Figure">Image with caption</h2>
+            </header>
             <figure>
               <img
                 src="https://picsum.photos/1000/600?random&amp;imageWithCaption"
                 alt="Image with caption"
                 title="Image with caption"
-              >
+              />
               <figcaption>Image with caption</figcaption>
             </figure>
           </section>
@@ -644,7 +771,8 @@ Textarea text</textarea>
                   href="https://highlightjs.org/"
                   target="_black"
                   rel="noopener noreferrer"
-                >Highlight.js</a>
+                  >Highlight.js</a
+                >
               </p>
             </header>
             <pre><code class="hljs css">
@@ -722,7 +850,9 @@ Textarea text</textarea>
           </section>
           <hr />
           <section>
-            <header><h2>Documentation</h2></header>
+            <header>
+              <h2>Documentation</h2>
+            </header>
             <p>
               Most of the documentation is still at an early stage.
               For more details, please have a look at the source of
@@ -740,11 +870,11 @@ Textarea text</textarea>
               <dl class="custom-dl">
                 <style>
                   .custom-dl dt {
-                  font-weight: 600;
+                    font-weight: 600;
                   }
 
                   .custom-dl dd.italic {
-                  font-style: italic;
+                    font-style: italic;
                   }
                 </style>
                 <dt>--global-font-size</dt>
@@ -757,11 +887,15 @@ Textarea text</textarea>
                 <dt>--font-stack</dt>
                 <dd>The fonts for the website.</dd>
                 <dd>
-                  Use <code>@font-face</code> or any other font
-                  provider to include your custom fonts.
+                  Use
+                  <code>@font-face</code> or any other font provider
+                  to include your custom fonts.
                 </dd>
                 <dt>--mono-font-stack</dt>
-                <dd>Same as above but for <code>code</code>.</dd>
+                <dd>
+                  Same as above but for
+                  <code>code</code>.
+                </dd>
                 <dt>--background-color</dt>
                 <dd>The page background color</dd>
                 <dt>--font-color</dt>
@@ -809,8 +943,8 @@ Textarea text</textarea>
                 </dd>
                 <dt>--display-h1-decoration</dt>
                 <dd>
-                  Show a double dash below <code>h1</code> elements.
-                  Possible values are:
+                  Show a double dash below
+                  <code>h1</code> elements. Possible values are:
                 </dd>
                 <dd class="italic">block, none</dd>
               </dl>
@@ -829,8 +963,9 @@ Textarea text</textarea>
               <dl class="custom-dl">
                 <dt>Single font size</dt>
                 <dd>
-                  Use <code>&lt;body class="terminal"&gt;</code>. If
-                  you leave that option, it will fallback to browser
+                  Use
+                  <code>&lt;body class="terminal"&gt;</code>. If you
+                  leave that option, it will fallback to browser
                   defaults. See <a href="/sans-serif/">here</a>.
                 </dd>
               </dl>
@@ -844,19 +979,24 @@ Textarea text</textarea>
                 href="https://egoist.sh/"
                 target="_blank"
                 rel="noopener noreferer"
-              >@egoist's</a>
+                >@egoist's</a
+              >
               work -
               <a
                 href="https://hackcss.egoist.moe/"
                 rel="noopener noreferer"
-              >hack.css</a>
+                >hack.css</a
+              >
             </p>
           </footer>
 
           <hr />
           <section>
             <header />
-            <p>Version: 0.7.1 <a href="#menu">Top</a></p>
+            <p>
+              Version: 0.7.1
+              <a href="#menu">Top</a>
+            </p>
           </section>
         </main>
       </div>

@@ -2,7 +2,9 @@
   <div class="terminal-nav flex">
     <header class="terminal-logo w-1/3">
       <div class="logo">
-        <a href="#" class="no-style terminal-prompt">2019 6 Hours of Spa</a>
+        <a href="#" class="no-style terminal-prompt"
+          >2019 6 Hours of Spa</a
+        >
         <span>Free practice 1</span>
       </div>
     </header>
@@ -160,7 +162,7 @@ export default {
   computed: {
     sublinks() {
       if (this.$nuxt._route.matched[0]) {
-        const res = this.menu.filter(row =>
+        const res = this.menu.filter((row) =>
           this.$nuxt._route.matched[0].path.includes(row.to),
         )[0];
         if (res) {

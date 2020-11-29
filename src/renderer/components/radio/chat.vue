@@ -9,16 +9,20 @@
         <span class="chattime">{{
           new Date(chatMessage.time).toISOString().substr(11, 8)
         }}</span>
-        <span :class="chatMessage.chatSender.class + '-chat'">#{{ chatMessage.chatSender.entryNumber }}
+        <span :class="chatMessage.chatSender.class + '-chat'"
+          >#{{ chatMessage.chatSender.entryNumber }}
           <span v-if="showTeamName">
-            Toyota Gazoo Racing |</span></span>
+            Toyota Gazoo Racing |</span
+          ></span
+        >
         <span
           class="username"
           :style="
             'color: ' + hashCode(chatMessage.chatSender.user) + ';'
           "
         >
-          {{ chatMessage.chatSender.user }}</span>
+          {{ chatMessage.chatSender.user }}</span
+        >
       </div>
       <div class="col-span-2">
         {{ chatMessage.text }}
@@ -30,7 +34,7 @@
         class="col-span-9"
         type="text"
         @keyup.enter="sendMessage"
-      >
+      />
       <button class="btn-primary" @click="sendMessage()">Send</button>
     </div>
   </div>
@@ -69,7 +73,7 @@ export default {
       }
       let colour = '#';
       for (let j = 0; j < 3; j++) {
-        const value = (hash >> (j * 8)) & 0xFF;
+        const value = (hash >> (j * 8)) & 0xff;
         colour += ('00' + value.toString(16)).substr(-2);
       }
       return colour;

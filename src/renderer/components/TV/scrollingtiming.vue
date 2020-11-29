@@ -8,7 +8,9 @@
       >
         <span class="car-pos">{{ index + 1 }}</span>
         <span class="car-num">{{ car.realdeal.EntryNumber }}</span>
-        <span :class="'car-class rotate-30 ' + car.realdeal.category">&nbsp;</span>
+        <span :class="'car-class rotate-30 ' + car.realdeal.category"
+          >&nbsp;</span
+        >
         <span class="car-team">{{ car.car2 }}&nbsp;-&nbsp;</span>
         <span> {{ car.realdeal.drivers[0].name }} </span>
       </div>
