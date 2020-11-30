@@ -9,6 +9,11 @@ import tweenManager from 'pixi-tween';
 import { TrackOOP } from './trackoop';
 import { CarOOP } from './caroop';
 export default {
+  data: () => {
+    return {
+      pixiCars: [],
+    };
+  },
   computed: {
     allCars() {
       return this.$store.state.cars.cars;
@@ -90,6 +95,7 @@ export default {
       this.viewport.addChild(this.path);
 
       this.viewport.sortableChildren = true;
+      this.viewport.threshold = 100;
 
       //   this.viewport.follow(bunny);
       this.viewport.zoomPercent(5);
@@ -112,6 +118,11 @@ export default {
       tween.from({ x: 0 }).to({ x: 250 });
       tween.start();
       tween.loop = true;
+
+      this.viewport.on('zoomed', (ctx) => {
+        console.log(ctx);
+        car.setAnnotationScale(1 / this.viewport.scaled);
+      });
 
       tween.on('repeat', (loopCount) => {
         const point = this.path.getPointAtPercentage(
