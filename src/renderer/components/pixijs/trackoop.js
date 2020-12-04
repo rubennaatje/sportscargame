@@ -53,8 +53,8 @@ export class TrackOOP extends PIXI.Container {
     this.track.geometry.invalidate();
 
     // sectors
-    this.drawMarker(800, 's2', 10, 2, 0xff0000, 'S2');
-    this.drawMarker(1758, 's3', 10, 2, 0xff00ff, 'S3');
+    // this.drawMarker(800, 's2', 10, 2, 0xff0000, 'S2');
+    // this.drawMarker(1758, 's3', 10, 2, 0xff00ff, 'S3');
 
     // corner names
     // this.drawMarker(150, '1', 10, 1, 0xf0f0f0, '1');
@@ -114,10 +114,19 @@ export class TrackOOP extends PIXI.Container {
     textDistance = 14,
   ) {
     // hack
-    point = point / 2.9;
-    const first = this.track.getPointAtLength(point - 1);
-    const middle = this.track.getPointAtLength(point);
-    const second = this.track.getPointAtLength(point + 1);
+    const relativePoint =
+      point * (this.pathLength / this.tracklength);
+
+    const first = this.getPointAtLength(relativePoint - 1);
+    const middle = this.getPointAtLength(relativePoint);
+    const second = this.getPointAtLength(relativePoint + 1);
+
+    // const first = { x: 1, y: 2 };
+    // const middle = { x: 1, y: 2 };
+    // const second = { x: 1, y: 2 };
+    // path = 10
+    // track is 10
+    // path / 10 = 10
 
     const test = this.createRect(0, 0, width, length, color);
     test.position.x = middle.x;

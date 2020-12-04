@@ -85,6 +85,7 @@ export default {
       });
     },
     AddTrack(track) {
+      console.log(track.graphics.track_path);
       this.path = new TrackOOP(track.graphics.track_path, 7001);
 
       // this.path.lineStyle(14.0, 0xffffff);
