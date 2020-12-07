@@ -1,5 +1,5 @@
 <template>
-  <div ref="stage" v-prevent-parent-scroll class="stage h-full" />
+  <div ref="stage" v-prevent-parent-scroll class="stage h-full w-full" />
 </template>
 <script>
 import { Viewport } from 'pixi-viewport';
@@ -60,11 +60,11 @@ export default {
       );
 
       this.viewport = new Viewport({
-        screenWidth: window.innerWidth,
-        screenHeight: window.innerHeight,
+        screenWidth: this.$refs.stage.clientWidth,
+        screenHeight: this.$refs.stage.clientWidth,
         worldWidth: 1000,
         worldHeight: 1000,
-        // interaction: this.app.renderer.plugins.interaction, // the interaction module is important for wheel to work properly when renderer.view is placed or scaled
+        interaction: this.app.renderer.plugins.interaction, // the interaction module is important for wheel to work properly when renderer.view is placed or scaled
       });
       this.app.stage.addChild(this.viewport);
     },
@@ -86,7 +86,7 @@ export default {
     },
     AddTrack(track) {
       console.log(track.graphics.track_path);
-      this.path = new TrackOOP(track.graphics.track_path, 7001);
+      this.path = new TrackOOP(track.graphics.track_path, 7001, 654);
 
       // this.path.lineStyle(14.0, 0xffffff);
 
@@ -127,25 +127,41 @@ export default {
       tween.loop = true;
 
       this.viewport.on('zoomed', (ctx) => {
-        console.log(ctx);
-        car.setAnnotationScale(1 / this.viewport.scaled);
+        // car.setAnnotationScale(1 / this.viewport.scaled);
+        car.scale.set(5 / this.viewport.scaled);
       });
-
+      car.car.on('click', () => {
+        console.log('click!');
+        this.viewport.follow(car);
+      });
       tween.on('repeat', (loopCount) => {
-        const point = this.path.getPointAtPercentage(
-          this.allCars[index].percentage,
-        );
+        if (this.path) {
+          let point = this.path.getPointAtPercentage(
+            this.allCars[index].percentage,
+          );
 
-        tween.from({ x: tween._to.x, y: tween._to.y }).to({
-          x: point.x,
-          y: point.y,
-        });
+          if (this.allCars[index].realdeal.car.extra.inPitlane) {
+            point = this.path.getPitlanePointAtPercentage(
+              this.allCars[index].pitlanePercentage,
+            );
+          }
+
+          tween.from({ x: tween._to.x, y: tween._to.y }).to({
+            x: point.x,
+            y: point.y,
+          });
+        }
       });
       if (this.allCars[index].carnumber === 1) {
         car.addAnnotation('P1 ');
       }
-      if (this.allCars[index].carnumber === 8) {
+      if (this.allCars[index].carnumber === 7) {
         car.addAnnotation('Your car ');
+        this.viewport.follow(car, {
+          speed: 1,
+          acceleration: 0.5,
+          radius: 50,
+        });
       }
       // if (this.allCars[index].carnumber === 29) {
       //   car.addAnnotation('Fastest lap', 0x9400D3, 50, 20, 2);

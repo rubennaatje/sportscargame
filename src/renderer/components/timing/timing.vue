@@ -12,41 +12,37 @@
       <th>last lap</th>
     </thead>
     <tbody>
-      <tr v-for="todo in allSprints" :key="todo.carnumber">
-        <td class="action">
-          {{ todo.carnumber }}
-        </td>
-        <td :class="todo.category + ' carclass ' + 'action'">
-          {{ todo.category }}
-        </td>
-        <td>
-          {{ todo.car2 }}
-        </td>
-        <td>
-          {{ todo.realdeal.drivers[0].name }}
-        </td>
-        <td>
-          {{ todo.speed }}
-        </td>
-        <td>
-          {{ todo.laps }}
-        </td>
-        <td>1</td>
+      <tr v-for="car in allCars" :key="car.carnumber">
+        <td>{{ car.pos }}</td>
+        <td class="action">{{ car.carnumber }}</td>
+        <td :class="car.category + ' carclass ' + 'action'">{{ car.category }}</td>
+        <td>{{ car.car2 }}</td>
+        <td>{{ car.realdeal.drivers[0].name }}</td>
+        <td>{{ car.speed }}</td>
+        <td>{{ car.laps }}</td>
+        <td>{{ car.percentage }}</td>
         <td>21</td>
-        <td>2:01</td>
+        <td>{{ formatTime(car.fastestlap.laptime) }}</td>
       </tr>
     </tbody>
   </table>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+// import { mapGetters } from 'vuex';
+import dayjs from 'dayjs';
 
 export default {
   computed: {
-    ...mapGetters({
-      allSprints: 'cars/getStandings',
-    }),
+    // ...mapGetters({
+    //   allCars: 'cars/getStandings',
+    // }),
+    allCars() {
+      return this.$store.state.cars.cars;
+    },
+  },
+  methods: {
+    formatTime: (time) => dayjs(time).format('mm:ss'),
   },
 };
 </script>

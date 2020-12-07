@@ -32,7 +32,6 @@ module.exports = {
     'import/no-unresolved': 0,
     'import/newline-after-import': 0,
     'no-underscore-dangle': 0,
-    'prettier/prettier': ['error'],
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
 
     'vue/max-attributes-per-line': 'off',
@@ -74,6 +73,7 @@ module.exports = {
     "vue/space-infix-ops": "off",
     "vue/space-unary-ops": "off",
     "vue/template-curly-spacing": "off",
-    "unicorn/number-literal-case": "off"
+    "unicorn/number-literal-case": "off",
+        'prettier/prettier': ['error'],
   },
 };

@@ -1,13 +1,14 @@
 import { SVGPixi } from './svg-pixi';
 
 export class TrackOOP extends PIXI.Container {
-  constructor(path, tracklength) {
+  constructor(path, tracklength, pitlaneLength) {
     super();
     this.track = new SVGPixi(path);
     this.track.zIndex = 2;
     this.readSvgPath(path);
     this.sortableChildren = true;
     this.tracklength = tracklength;
+    this.pitlaneLength = pitlaneLength;
     this.pathLength = this.track.getTotalLength();
     this.sectors = [];
   }
@@ -175,6 +176,14 @@ export class TrackOOP extends PIXI.Container {
   getPointAtPercentage(percentage) {
     return this.track.getPointAtLength(
       (this.track.getTotalLength() / 100) * percentage,
+    );
+  }
+  getPitlanePointAtLength() {
+    return this.pitlane.getPointAtLength(length);
+  }
+  getPitlanePointAtPercentage(percentage) {
+    return this.pitlane.getPointAtLength(
+      (this.pitlane.getTotalLength() / 100) * percentage,
     );
   }
 }

@@ -16,7 +16,10 @@
           <th>risk 3</th>
         </thead>
         <tbody>
-          <tr v-for="corner in getInfo.track.track.corners" :key="corner.num">
+          <tr
+            v-for="corner in getInfo.track.track.corners"
+            :key="corner.num"
+          >
             <td>{{ corner.num }}</td>
             <td>{{ corner.name }}</td>
             <td>{{ corner.point }}</td>
