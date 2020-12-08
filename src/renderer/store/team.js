@@ -36,6 +36,12 @@ export const getters = {
       a.val,
     ]);
   },
+  getDeltaTelemetry: (state) => (id) => {
+    return state.telemetry.currentTelemetry.map((a) => [
+      a.pos,
+      a.delta,
+    ]);
+  },
   getLastLapTelemetry: (state) => (id) => {
     return state.telemetry.lastlaptel.map((a) => [a.pos, a.val]);
   },

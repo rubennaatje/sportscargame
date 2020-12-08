@@ -21,7 +21,7 @@
         <td>{{ car.speed }}</td>
         <td>{{ car.laps }}</td>
         <td>{{ car.percentage }}</td>
-        <td>21</td>
+        <td>{{ Math.abs(car.gap).toFixed(1) }}</td>
         <td>{{ formatTime(car.fastestlap.laptime) }}</td>
       </tr>
     </tbody>
@@ -29,20 +29,17 @@
 </template>
 
 <script>
-// import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 import dayjs from 'dayjs';
 
 export default {
   computed: {
-    // ...mapGetters({
-    //   allCars: 'cars/getStandings',
-    // }),
-    allCars() {
-      return this.$store.state.cars.cars;
-    },
+    ...mapGetters({
+      allCars: 'cars/getStandings',
+    }),
   },
   methods: {
-    formatTime: (time) => dayjs(time).format('mm:ss'),
+    formatTime: (time) => (time ? dayjs(time).format('mm:ss') : '-'),
   },
 };
 </script>

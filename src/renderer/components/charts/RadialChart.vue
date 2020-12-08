@@ -1,11 +1,6 @@
 <template>
   <div class="h-full w-full">
-    <v-chart
-      :options="polar"
-      theme="dark_ruben"
-      style="width: 100%; height: 100%"
-      autoresize
-    />
+    <v-chart :options="polar" theme="dark_ruben" style="width: 100%; height: 100%" autoresize />
     <!-- <button class="btn-primary" @click="testMethod()">Send</button> -->
   </div>
 </template>
@@ -31,6 +26,7 @@ export default {
   computed: {
     ...mapGetters({
       getTelemetry: 'team/getTelemetry',
+      getDeltaTelemetry: 'team/getDeltaTelemetry',
       getLastLapTelemetry: 'team/getLastLapTelemetry',
     }),
     polar() {
@@ -38,6 +34,9 @@ export default {
         theme: 'dark_ruben',
         xAxis: {
           type: 'value',
+          axisLine: {
+            show: true,
+          },
         },
         yAxis: [
           {
@@ -46,8 +45,16 @@ export default {
           },
           {
             type: 'value',
-            name: 'braking',
-            // offset: 80
+            name: 'delta',
+            offset: 80,
+            min: -1,
+            max: 1,
+            axisLine: {
+              show: true,
+            },
+            splitLine: {
+              show: true,
+            },
           },
           {
             type: 'value',
@@ -64,38 +71,7 @@ export default {
             type: 'line',
           },
           {
-            data: [
-              2.0,
-              4.9,
-              7.0,
-              23.2,
-              25.6,
-              76.7,
-              135.6,
-              162.2,
-              32.6,
-              20.0,
-              6.4,
-              3.3,
-              23.2,
-              25.6,
-              76.7,
-              135.6,
-              162.2,
-              32.6,
-              20.0,
-              6.4,
-              3.3,
-              23.2,
-              25.6,
-              76.7,
-              135.6,
-              162.2,
-              32.6,
-              20.0,
-              6.4,
-              3.3,
-            ],
+            data: this.getDeltaTelemetry(),
             yAxisIndex: 1,
             type: 'line',
           },

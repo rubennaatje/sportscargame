@@ -31,7 +31,7 @@ export const getters = {
   },
   getStandings(state) {
     return Object.values(state.cars).sort((a, b) =>
-      a.pos < b.pos ? 1 : -1,
+      a.pos > b.pos ? 1 : -1,
     );
   },
   getTopSpeed: (state) => (id) => {
