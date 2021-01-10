@@ -1,5 +1,9 @@
 <template>
-  <div ref="stage" v-prevent-parent-scroll class="stage h-full w-full" />
+  <div
+    ref="stage"
+    v-prevent-parent-scroll
+    class="stage h-full w-full"
+  />
 </template>
 <script>
 import { Viewport } from 'pixi-viewport';
@@ -33,17 +37,24 @@ export default {
       if (!this.trackIsSet && newValue.graphics.track_path) {
         this.trackIsSet = true;
         this.AddTrack(newValue);
-        console.log('add track!');
       }
-      console.log('update!', newValue);
     },
   },
   beforeDestroy() {
+    this.trackIsSet = false;
+    this.carsAreSet = false;
     this.app.destroy();
   },
   mounted() {
     this.startPixi();
-    console.log();
+    if (
+      !this.trackIsSet &&
+      this.trackInfo &&
+      this.trackInfo.graphics.track_path
+    ) {
+      this.trackIsSet = true;
+      this.AddTrack(this.trackInfo);
+    }
   },
   methods: {
     initPixi() {
@@ -85,7 +96,6 @@ export default {
       });
     },
     AddTrack(track) {
-      console.log(track.graphics.track_path);
       this.path = new TrackOOP(track.graphics.track_path, 7001, 654);
 
       // this.path.lineStyle(14.0, 0xffffff);
@@ -131,7 +141,6 @@ export default {
         car.scale.set(5 / this.viewport.scaled);
       });
       car.car.on('click', () => {
-        console.log('click!');
         this.viewport.follow(car);
       });
       tween.on('repeat', (loopCount) => {

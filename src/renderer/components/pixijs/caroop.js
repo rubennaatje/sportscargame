@@ -6,7 +6,6 @@ export class CarOOP extends PIXI.Container {
   category;
   constructor(category, color, carnumber) {
     super();
-    console.log(category, color, carnumber);
     this.initialize(category, color, carnumber);
     this.color = color;
     this.carnumber = carnumber;
@@ -34,7 +33,6 @@ export class CarOOP extends PIXI.Container {
         break;
     }
 
-    console.log(this);
     const text = new PIXI.Text(carnumber, {
       fontFamily: '"Courier New", Courier, monospace',
       fontWeight: 'bold',

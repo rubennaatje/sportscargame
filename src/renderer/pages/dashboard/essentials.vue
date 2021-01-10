@@ -17,7 +17,7 @@
       </SContainer>
 
       <SContainer class="h-1/3 col-span-2" title="stint">
-        <RadialChart class="" />
+        <RadialChart class />
       </SContainer>
 
       <SContainer
@@ -26,16 +26,21 @@
       >
         <div>
           LL:
-          <span class="better"
-            ><span class="green-text">3.2</span>L
+          <span class="better">
+            <span class="green-text">3.2</span>L
           </span>
         </div>
-        <div>AVG: <span class="green-text">4.2</span>L</div>
-        <div class="col-span-2">
-          Remaining: <span class="green-text">70</span> Liters
+        <div>
+          AVG:
+          <span class="green-text">4.2</span>L
         </div>
         <div class="col-span-2">
-          Remaining: <span class="green-text"> 10.4 </span> Laps
+          Remaining:
+          <span class="green-text">70</span> Liters
+        </div>
+        <div class="col-span-2">
+          Remaining:
+          <span class="green-text">10.4</span> Laps
         </div>
       </SContainer>
 
@@ -43,8 +48,35 @@
         <AllTires />
       </SContainer>
 
-      <SContainer title="temperatures">
-        <ETestGraph />
+      <SContainer
+        title="temperatures"
+        class="grid grid-cols-3 grid-rows-2 text-center"
+      >
+        <div>
+          Last lap:
+          <br />
+          <span>
+            <span>2:51</span>
+          </span>
+        </div>
+        <div class="delta-container">
+          Delta
+          <br />
+          <div>
+            <span class="green-text delta">-1.5</span>
+          </div>
+        </div>
+        <div>
+          current lap:
+          <span class="green-text">1:43</span>
+        </div>
+        <div class="col-span-2">
+          <span class="green-text">70</span> Liters
+        </div>
+        <div class="col-span-2">
+          Remaining:
+          <span class="green-text">10.4</span> Laps
+        </div>
       </SContainer>
 
       <SContainer title="driver comms" class="col-span-2 h-full">
@@ -77,14 +109,17 @@
       </SContainer>
 
       <SContainer title="onboard">
-        <SpeedChart />
+        <!-- <SpeedChart /> -->
+        <LapTimes />
       </SContainer>
 
       <SContainer class="col-span-2 h-1/5" title="chat">
         <chat class="h-full" />
       </SContainer>
 
-      <SContainer title="telemetry"> test </SContainer>
+      <SContainer title="telemetry">
+        <Delta class="overflow-y-auto" />
+      </SContainer>
 
       <SContainer class="col-span-2 h-1/5" title="TV">
         <Trackmap />

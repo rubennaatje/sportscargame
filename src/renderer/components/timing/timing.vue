@@ -1,6 +1,7 @@
 <template>
   <table>
     <thead>
+      <th>pos</th>
       <th>#</th>
       <th>category</th>
       <th>car</th>
@@ -15,7 +16,9 @@
       <tr v-for="car in allCars" :key="car.carnumber">
         <td>{{ car.pos }}</td>
         <td class="action">{{ car.carnumber }}</td>
-        <td :class="car.category + ' carclass ' + 'action'">{{ car.category }}</td>
+        <td :class="car.category + ' carclass ' + 'action'">
+          {{ car.category }}
+        </td>
         <td>{{ car.car2 }}</td>
         <td>{{ car.realdeal.drivers[0].name }}</td>
         <td>{{ car.speed }}</td>

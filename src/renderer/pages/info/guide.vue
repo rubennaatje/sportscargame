@@ -86,11 +86,6 @@ export default {
     ...mapGetters({
       getInfo: 'staticInfo/getInfo',
     }),
-    watch: {
-      getInfo(newValue, oldValue) {
-        console.log(newValue);
-      },
-    },
   },
 };
 </script>

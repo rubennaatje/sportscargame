@@ -29,7 +29,6 @@ export const mutations = {
     state.user.entryNumber = data.entryNumber;
   },
   UPDATECHAT(state, data) {
-    console.log(data);
     state.chat.push(data);
   },
 };

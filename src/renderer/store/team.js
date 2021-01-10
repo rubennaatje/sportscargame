@@ -1,3 +1,5 @@
+import Vue from 'vue';
+
 export const state = () => ({
   car: {},
   telemetry: {
@@ -5,6 +7,7 @@ export const state = () => ({
     lastlaptel: [],
   },
   laptimes: [],
+  log: [],
 });
 
 export const actions = {
@@ -16,15 +19,20 @@ export const actions = {
 export const mutations = {
   UPDATETEAM(state, data) {
     state.car = data.data;
+    state.log = data.log;
+
     if (
       state.telemetry.currentTelemetry.length >
       data.telemetry.currentTelemetry.length
     ) {
       state.telemetry.lastlaptel = state.telemetry.currentTelemetry;
-      console.log(state);
     }
-    state.telemetry.currentTelemetry =
-      data.telemetry.currentTelemetry;
+
+    Vue.set(
+      state.telemetry,
+      'currentTelemetry',
+      data.telemetry.currentTelemetry,
+    );
     state.laptimes = data.telemetry.laptimes;
   },
 };
@@ -69,5 +77,8 @@ export const getters = {
     return state.laptimes.forEach((val, index) => {
       return { num: index, time: val };
     });
+  },
+  getLiveTelemetry: (state) => {
+    return state.telemetry.currentTelemetry.slice(-1)[0];
   },
 };

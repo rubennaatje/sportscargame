@@ -46,7 +46,6 @@ export default {
           {
             type: 'value',
             name: 'delta',
-            offset: 80,
             min: -1,
             max: 1,
             axisLine: {
@@ -59,6 +58,7 @@ export default {
           {
             type: 'value',
             name: 'throttle',
+            offset: 80,
           },
         ],
         series: [

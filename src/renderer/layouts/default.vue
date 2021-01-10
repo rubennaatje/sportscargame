@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div class="app-container">
     <app-header />
     <nuxt />
   </div>
@@ -85,5 +85,13 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.delta {
+  background-color: green;
+}
+
+.app-container {
+  min-height: calc(100vh - 66px);
 }
 </style>
