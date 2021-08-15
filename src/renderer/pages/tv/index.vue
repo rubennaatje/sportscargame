@@ -5,7 +5,7 @@
         <div>
           <Racetimer />
           <Trackmap />
-          <Scrollingtiming />
+          <!-- <Scrollingtiming /> -->
         </div>
       </SContainer>
       <SContainer class="row-span-1" title="stint">

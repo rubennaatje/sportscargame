@@ -18,16 +18,17 @@ export const actions = {
 
 export const mutations = {
   UPDATETEAM(state, data) {
-    state.car = data.data;
-    state.log = data.log;
-
+    // state.car = data.data;
+    // state.log = data.log;
     if (
       state.telemetry.currentTelemetry.length >
       data.telemetry.currentTelemetry.length
     ) {
-      state.telemetry.lastlaptel = state.telemetry.currentTelemetry;
+      Object.freeze(state.telemetry.currentTelemetry);
+      state.telemetry.lastlaptel = Object.freeze(
+        state.telemetry.currentTelemetry,
+      );
     }
-
     Vue.set(
       state.telemetry,
       'currentTelemetry',

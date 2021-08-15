@@ -137,7 +137,7 @@ export class TrackOOP extends PIXI.Container {
     if (placeText !== '') {
       const text = new PIXI.Text(placeText, {
         fontFamily: '"Courier New", Courier, monospace',
-        fontSize: 8,
+        fontSize: 9,
         fill: 0xffffff,
         align: 'center',
       });
@@ -148,7 +148,7 @@ export class TrackOOP extends PIXI.Container {
         second.x,
         second.y,
       );
-      text.resolution = 4;
+      text.resolution = 6;
       test.addChild(text);
     }
     this.addChild(test);

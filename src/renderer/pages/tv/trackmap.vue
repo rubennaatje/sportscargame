@@ -1,7 +1,7 @@
 <template>
   <SContainer title="trackmap" class="h-full">
     <Trackmap class="h-9/10" />
-    <Scrollingtiming />
+    <!-- <Scrollingtiming /> -->
   </SContainer>
 </template>
 

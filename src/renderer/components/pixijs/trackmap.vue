@@ -22,6 +22,9 @@ export default {
     allCars() {
       return this.$store.state.cars.cars;
     },
+    delta() {
+      return this.$store.state.cars.delta;
+    },
     trackInfo() {
       return this.$store.state.staticInfo.track.track;
     },
@@ -96,7 +99,7 @@ export default {
       });
     },
     AddTrack(track) {
-      this.path = new TrackOOP(track.graphics.track_path, 7001, 654);
+      this.path = new TrackOOP(track.graphics.track_path, 13626, 533);
 
       // this.path.lineStyle(14.0, 0xffffff);
 
@@ -122,6 +125,16 @@ export default {
 
       this.viewport.addChild(this.path);
     },
+    zoomSize() {
+      const zoom = 4 / (this.viewport.scaled * this.viewport.scaled);
+
+      if (zoom < 1.5) {
+        return 1.5;
+      } else if (zoom > 5) {
+        return 5;
+      }
+      return zoom;
+    },
     AddCar(index) {
       const car = new CarOOP(
         this.allCars[index].category,
@@ -131,14 +144,13 @@ export default {
 
       // init tween
       const tween = PIXI.tweenManager.createTween(car);
-      tween.time = 250;
+      tween.time = 500;
       tween.from({ x: 0 }).to({ x: 250 });
       tween.start();
       tween.loop = true;
 
       this.viewport.on('zoomed', (ctx) => {
-        // car.setAnnotationScale(1 / this.viewport.scaled);
-        car.scale.set(5 / this.viewport.scaled);
+        car.scale.set(this.zoomSize());
       });
       car.car.on('click', () => {
         this.viewport.follow(car);
@@ -155,6 +167,7 @@ export default {
             );
           }
 
+          tween.time = this.delta;
           tween.from({ x: tween._to.x, y: tween._to.y }).to({
             x: point.x,
             y: point.y,
@@ -166,16 +179,16 @@ export default {
       }
       if (this.allCars[index].carnumber === 7) {
         car.addAnnotation('Your car ');
-        this.viewport.follow(car, {
-          speed: 1,
-          acceleration: 0.5,
-          radius: 50,
-        });
+        // this.viewport.follow(car, {
+        //   speed: 1,
+        //   acceleration: 0.5,
+        //   radius: 50,
+        // });
       }
       // if (this.allCars[index].carnumber === 29) {
       //   car.addAnnotation('Fastest lap', 0x9400D3, 50, 20, 2);
       // }
-      car.scale.set(2, 2);
+      car.scale.set(1, 1);
       this.viewport.addChild(car);
     },
   },

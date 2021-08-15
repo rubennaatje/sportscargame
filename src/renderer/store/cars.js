@@ -2,7 +2,7 @@ import { remote } from 'electron';
 
 export const state = () => ({
   cars: [],
-  telemetry: [{ topspeed: [] }, { topspeed: [] }, { topspeed: [] }],
+  delta: 0,
 });
 
 export const actions = {
@@ -21,7 +21,8 @@ export const actions = {
 
 export const mutations = {
   UPDATECARS(state, data) {
-    state.cars = data;
+    state.cars = data.data;
+    state.delta = data.delta;
   },
 };
 

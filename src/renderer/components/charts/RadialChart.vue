@@ -1,6 +1,11 @@
 <template>
   <div class="h-full w-full">
-    <v-chart :options="polar" theme="dark_ruben" style="width: 100%; height: 100%" autoresize />
+    <v-chart
+      :options="polar"
+      theme="dark_ruben"
+      style="width: 100%; height: 100%"
+      autoresize
+    />
     <!-- <button class="btn-primary" @click="testMethod()">Send</button> -->
   </div>
 </template>

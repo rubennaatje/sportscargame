@@ -36,7 +36,7 @@ export class CarOOP extends PIXI.Container {
     const text = new PIXI.Text(carnumber, {
       fontFamily: '"Courier New", Courier, monospace',
       fontWeight: 'bold',
-      fontSize: 2,
+      fontSize: 3.5,
       fill: 0xffffff,
       align: 'center',
     });
